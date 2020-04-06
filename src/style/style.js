@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-const Main = styled.div`
+const AppCss = styled.div`
     backgrond: black;
     text-align: center;
 `;
@@ -13,4 +13,4 @@ const PageCss = styled.div`
     float: center;
 `;
 
-export {Main, PageCss};
+export {AppCss, PageCss};

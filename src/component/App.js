@@ -2,11 +2,7 @@ import React from 'react'
 import Page from './Page.js'
 import List from './List.js'
 import Md from './Md.js'
-import styled , { css } from 'styled-components'
-
-const Main = styled.div`
-    text-align: center;
-`;
+import { AppCss } from '../style/style.js'
 
 class App extends React.Component {
     constructor(props)
@@ -23,12 +19,12 @@ class App extends React.Component {
     render() {
         const { posts } = this.state;
         return(
-            <Main>
+            <AppCss>
                 <h1>My React App</h1>
                 <Page>TESTING</Page>
                 <List posts={posts} />
                 <Md />
-            </Main>
+            </AppCss>
         )
     };
 }
