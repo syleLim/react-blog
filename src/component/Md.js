@@ -1,23 +1,16 @@
 import React from 'react'
 import ReactMarkDown from 'react-markdown'
+import {codeBlock, TabelCellBlock, QuoteBlock} from '../style/mdStyle.js'
 
-const md = `
-# title
-\`\`\`
-code block
-\`\`\`
-`
-
-const codeBlock = (props) => (
-    <pre style={{background : '#000', color: '#fff', padding: 10}}>
-        <code>
-            {props.value}
-        </code>
-    </pre>
-)
-
-const Md = () => (
-    <ReactMarkDown source={md} renderers={{code: codeBlock}}/>
+const Md = (props) => (
+    <ReactMarkDown source={props.source}
+                    skipHtml={false}
+                    escapeHtml={false}
+                    renderers={{
+                        code: codeBlock,
+                        tableCell: TabelCellBlock,
+                        blockquote: QuoteBlock
+                    }}/>
 )
 
 export default Md;

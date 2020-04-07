@@ -4,6 +4,28 @@ import List from './List.js'
 import Md from './Md.js'
 import { AppCss } from '../style/style.js'
 
+const md = `
+# title
+
+### table
+
+|title|content|
+|---|---|
+|react|markdown|
+
+\`\`\`
+code block
+\`\`\`
+
+**bold**<br><br>
+*itelic*
+
+>quote
+
+char \`impact\`
+`;
+
+
 class App extends React.Component {
     constructor(props)
     {
@@ -23,7 +45,7 @@ class App extends React.Component {
                 <h1>My React App</h1>
                 <Page>TESTING</Page>
                 <List posts={posts} />
-                <Md />
+                <Md source={md}/>
             </AppCss>
         )
     };
