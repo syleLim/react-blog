@@ -13,4 +13,12 @@ const PageCss = styled.div`
     float: center;
 `;
 
-export {AppCss, PageCss};
+const CategoryBoxCss = styled.div`
+    background: yellow;
+    width: 20%;
+    height: 100%;
+    margin: 1rem;
+    float: left;
+`;
+
+export {AppCss, PageCss, CategoryBoxCss};
