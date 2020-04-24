@@ -1,11 +1,11 @@
 import React from "react"
+import { HomeStyle } from "../styles"
 
 const Home = () => {
     return (
-        <div>
-            <h2>Home</h2>
-            <p>Home Page</p>
-        </div>
+        <HomeStyle>
+            <h1>Home</h1>
+        </HomeStyle>
     )
 }
 
