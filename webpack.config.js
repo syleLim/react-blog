@@ -1,26 +1,27 @@
-const path = require('path')                                        
-const HtmlWebpackPlugin = require('html-webpack-plugin')            
+const path = require('path')  
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = {                                      
-    entry: './src/index.js',                           
+module.exports = {
+    entry: './src/index.js',
     output: {                                          
-        path: path.join(__dirname, '/dist'),           
+        path: path.join(__dirname, '/dist'),
         filename: 'index_bundle.js'
     },
-    module: {                                          
+    module: {            
         rules: [
             {
-                test: /\.js$/,                         
-                exclude: /node_modules/,               
+                test: /\.js$/,
+                exclude: /node_modules/,
                 use:{
-                    loader: 'babel-loader'				
+                    loader: 'babel-loader'
                 }
             },
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/index.html'                // 생성한 템플릿 파일
+            template: './src/index.html'
         })
     ]
 }
+
