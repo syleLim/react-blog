@@ -1,6 +1,6 @@
 import styles from "styled-components"
 
-const ProfileStyle = styled.div`
+const ProfileStyle = styles.div`
 	margin-top	: 2rem;
 `;
 

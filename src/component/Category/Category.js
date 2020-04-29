@@ -1,18 +1,18 @@
 import React from "react"
 import { CategoryStyle } from "../../styles"
-import { Profile } from "./Profile"
-import { Map, fromJS } from "immutable"
+import Profile from "./Profile"
+import { Map, List, fromJS } from "immutable"
 import ImmutablePropTypes from "react-immutable-proptypes"
+import { NavLink } from "react-router-dom"
 
 const CategoryComponent = ({profile, categoryList}) => {
-    const { name, description } = profile;
     const Categories = categoryList.map(category => {
         return (
             <div>
-                <h1>{ category.header }</h1>
-                { category.sub.map(subName => (
-                    <div>{ subName }</div>
-                )) }
+                <h1>{ category.get("header") }</h1>
+                {category.get("sub").map(subName => (
+                    <div><NavLink exact to={`/postList/:${subName}`}>{ subName }</NavLink></div>
+                ))}
             </div>
         )
     })
@@ -20,7 +20,7 @@ const CategoryComponent = ({profile, categoryList}) => {
     return (
         <CategoryStyle>
             <Profile profile={ profile } />
-            {categoryList}
+            {Categories}
         </CategoryStyle>
     );
 };
@@ -31,11 +31,11 @@ CategoryComponent.propTypes = {
 };
 
 CategoryComponent.defaultProps = {
-    profile         : new Map({name : "no one user", description : "no description"}),
-    categoryList    : new fromJS([
+    profile         : Map({name : "no one user", description : "no description"}),
+    categoryList    : fromJS([
         {  
             header : "Categoty header",
-            sub    : new List([
+            sub    : List([
                 "CategorySubName"
             ])
         }

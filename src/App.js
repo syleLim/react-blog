@@ -1,7 +1,7 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { HomePage, PostListPage, PostPage } from "./pages"
-import { CategoryComponent } from "./"
+import { CategoryComponent } from "./component"
 
 class App extends React.Component {
     render () {

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { HomeStyle } from "../../styles"
 import { Map, List, fromJS } from "immutable"
 
-const HomeCompoenet = () => {
+const HomeComponent = () => {
 	return (
 		<HomeStyle>
 			Main	
@@ -19,4 +19,4 @@ HomeComponent.defaultProps = {
     
 };
 
-export default HomeCompoenet;
+export default HomeComponent;
