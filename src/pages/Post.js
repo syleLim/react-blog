@@ -1,7 +1,7 @@
 import React from "react"
 import { PostStyle } from "../styles"
 
-const Post = () => {
+const PostPage = () => {
     return (
         <PostStyle>
             <h1>Post</h1>
@@ -9,4 +9,4 @@ const Post = () => {
     );
 }
 
-export default Post;
+export default PostPage;

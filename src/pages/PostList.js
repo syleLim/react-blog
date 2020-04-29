@@ -1,7 +1,7 @@
 import React from "react"
 import { PostListStyle } from "../styles"
 
-const PostList = () => {
+const PostListPage = () => {
     return (
         <PostListStyle>
             <h1>Post</h1>
@@ -9,4 +9,4 @@ const PostList = () => {
     );
 }
 
-export default PostList;
+export default PostListPage;

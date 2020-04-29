@@ -1,3 +1,3 @@
-export { defualt as Home }      from "./Home"
-export { defualt as Post }      from "./Post"
-export { defualt as PostList }  from "./PostList"
+export { default as HomePage }      from "./Home"
+export { default as PostPage }      from "./Post"
+export { default as PostListPage }  from "./PostList"

@@ -1,12 +1,12 @@
 import React from "react"
-import { HomeStyle } from "../styles"
+import { HomeComponent } from "../component"
 
-const Home = () => {
+const HomePage = () => {
     return (
-        <HomeStyle>
+        <HomeComponent>
             <h1>Home</h1>
-        </HomeStyle>
+        </HomeComponent>
     )
 }
 
-export default Home;
+export default HomePage;
