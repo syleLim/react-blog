@@ -19,4 +19,4 @@ HomeComponent.defaultProps = {
     
 };
 
-export default CategoryComponent;
+export default HomeCompoenet;
