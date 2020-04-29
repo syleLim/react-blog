@@ -1,11 +1,11 @@
 import React from "react"
-import { PostStyle } from "../styles"
+import { PostComponent } from "../component"
 
 const PostPage = () => {
     return (
-        <PostStyle>
+        <PostComponent>
             <h1>Post</h1>
-        </PostStyle>
+        </PostComponent>
     );
 }
 

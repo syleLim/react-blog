@@ -1,11 +1,11 @@
 import React from "react"
-import { PostListStyle } from "../styles"
+import { PostListComponent } from "../component"
 
 const PostListPage = () => {
     return (
-        <PostListStyle>
+        <PostListComponent>
             <h1>Post</h1>
-        </PostListStyle>
+        </PostListComponent>
     );
 }
 
