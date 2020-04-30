@@ -9,8 +9,8 @@ class App extends React.Component {
             <div>
                 <CategoryComponent />
                 <Route exact path="/" component={HomePage}/>
-                <Route path="/postlist" component={PostListPage}/>
-                <Route path="/post" component={PostPage}/>
+                <Route path="/postlist/:id" component={PostListPage}/>
+                <Route path="/post/:id" component={PostPage}/>
             </div>
         )
     };

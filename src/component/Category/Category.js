@@ -1,17 +1,23 @@
 import React from "react"
 import { CategoryStyle } from "../../styles"
 import Profile from "./Profile"
-import { Map, List, fromJS } from "immutable"
+import { Record, List } from "immutable"
 import ImmutablePropTypes from "react-immutable-proptypes"
+import PropTypes from "prop-types"
 import { NavLink } from "react-router-dom"
 
 const CategoryComponent = ({profile, categoryList}) => {
     const Categories = categoryList.map(category => {
+        const { header, sub } = category;
         return (
             <div>
-                <h1>{ category.get("header") }</h1>
-                {category.get("sub").map(subName => (
-                    <div><NavLink exact to={`/postList/:${subName}`}>{ subName }</NavLink></div>
+                <h1>{ header }</h1>
+                {sub.map(({id, subName}) => (
+                    <div>
+                        <NavLink exact to={`/postlist/${id}`}>
+                            { subName }
+                        </NavLink>
+                    </div>
                 ))}
             </div>
         )
@@ -26,19 +32,35 @@ const CategoryComponent = ({profile, categoryList}) => {
 };
 
 CategoryComponent.propTypes = {
-    profile         : ImmutablePropTypes.map,
-    categoryList    : ImmutablePropTypes.list
+    profile         : ImmutablePropTypes.recordOf({
+        name        : PropTypes.string,
+        description : PropTypes.string
+    }),
+    categoryList    : ImmutablePropTypes.listOf(
+        ImmutablePropTypes.recordOf({
+            header  : PropTypes.string,
+            sub     : ImmutablePropTypes.listOf(
+                ImmutablePropTypes.recordOf({
+                    id      : PropTypes.number,
+                    subName : PropTypes.string
+                })
+            )
+        })
+    )
 };
 
 CategoryComponent.defaultProps = {
-    profile         : Map({name : "no one user", description : "no description"}),
-    categoryList    : fromJS([
-        {  
-            header : "Categoty header",
-            sub    : List([
-                "CategorySubName"
+    profile         : Record({name : "no one user", description : "no description"})(),
+    categoryList    : List([
+        Record({
+            header  : "Categoty header",
+            sub     : List([
+                Record({
+                    id      : 0,
+                    subName : "CategorySubName"
+                })()
             ])
-        }
+        })()
     ])
 };
 
