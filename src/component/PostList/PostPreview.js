@@ -5,12 +5,12 @@ import PropTypes from "prop-types"
 import ImmutablePropTypes from "react-immutable-proptypes"
 
 const PostPreview = ({post}) => {
-	const { id, title, date, preview, author} = post;
+	const { postId, title, date, preview, author} = post;
 
 	return (
 		<PostPreviewStyle>
 			<h3>
-				<NavLink to={`/post/${id}`}>
+				<NavLink to={`/post/${postId}`}>
 					{title}
 				</NavLink>
 			</h3>

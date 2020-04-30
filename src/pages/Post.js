@@ -1,11 +1,11 @@
 import React from "react"
 import { PostComponent } from "../component"
 
-const PostPage = () => {
+const PostPage = ({match}) => {
     return (
-        <PostComponent>
-            <h1>Post</h1>
-        </PostComponent>
+        <PostComponent 
+            id={Number(match.params.id)}
+        />
     );
 }
 
