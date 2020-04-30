@@ -57,7 +57,11 @@ CategoryComponent.defaultProps = {
             sub     : List([
                 Record({
                     id      : 0,
-                    subName : "CategorySubName"
+                    subName : "category1"
+                })(),
+                Record({
+                    id      : 1,
+                    subName : "category2"
                 })()
             ])
         })()

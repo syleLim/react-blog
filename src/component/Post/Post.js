@@ -5,13 +5,14 @@ import { PostStyle } from "../../styles"
 import { List, Record } from "immutable"
 
 const PostCompoenet = ({posts, id}) => {
-	const postBox = posts.map(e => {
-		if (e.postId === id) {
+	console.log
+	const postBox = posts.map(post => {
+		if (post.postId === id) {
 			return (
 				<PostStyle>
-					<h2>{e.title}</h2>
-					<h3>{e.date}</h3>
-					<h4>{e.content}</h4>
+					<h2>{post.title}</h2>
+					<h3>{post.date}</h3>
+					<h4>{post.content}</h4>
 				</PostStyle>
 			)
 		}

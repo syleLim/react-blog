@@ -44,12 +44,20 @@ PostListComponent.defaultProps = {
 			authoor		: "auther1"
 		})(),
 		Record({
-			category_id	: 0,
+			categoryId	: 0,
 			postId		: 1,
 			title		: "post2",
 			date		: "date2",
 			preview		: "preview2",
 			authoor		: "auther2"
+		})(),
+		Record({
+			categoryId	: 1,
+			postId		: 2,
+			title		: "post3",
+			date		: "date3",
+			preview		: "preview3",
+			authoor		: "auther3"
 		})()
 	])
 };

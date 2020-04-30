@@ -1,7 +1,9 @@
 import styles from "styled-components"
 
 const CategoryStyle = styles.div`
-	margin-top      : 2rem;
+	width			: 20%;
+	float			: left;
+	background		: #ff0000;
 `;
 
 export default CategoryStyle;
