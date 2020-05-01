@@ -1,18 +1,20 @@
 import React from "react"
 import PropTypes from "prop-types"
 import ImmutablePropTyps from "react-immutable-proptypes"
-import { PostStyle } from "../../styles"
 import { List, Record } from "immutable"
 
+import { PostStyle } from "../../styles"
+import { MarkDown } from "../../lib"
+
+
 const PostCompoenet = ({posts, id}) => {
-	console.log
 	const postBox = posts.map(post => {
 		if (post.postId === id) {
 			return (
 				<PostStyle>
 					<h2>{post.title}</h2>
 					<h3>{post.date}</h3>
-					<h4>{post.content}</h4>
+					<MarkDown content={post.content} />
 				</PostStyle>
 			)
 		}
@@ -44,13 +46,20 @@ PostCompoenet.defaultProps = {
 			postId	: 0,
 			title	: "postId 0",
 			date	: "post 0 date",
-			content	: "post 0"
+			content	: 	`# MarkDwon
+## header
+### content
+\`\`\`
+code block
+\`\`\`
+inline \`code\`
+`
 		})(),
 		Record({
 			postId	: 1,
 			title	: "postId 1",
 			date	: "post 1 date",
-			content	: "post 1"
+			content	: `# Post 2`
 		})()
 	])
 };
