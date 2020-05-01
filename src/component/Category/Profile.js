@@ -1,6 +1,6 @@
 import React from "react"
 import { ProfileStyle } from "../../styles"
-import { Record, Map, List } from "immutable"
+import { Record } from "immutable"
 import PropTypes from "prop-types";
 
 const Profile = ({profile}) => {

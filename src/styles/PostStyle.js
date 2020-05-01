@@ -1,7 +1,10 @@
 import styles from "styled-components"
 
 const PostStyle = styles.div`
-	margin-top      : 2rem;
+	float		: left;
+	background	: #00ffff;
+	margin		: 2rem;
+	padding		: 2rem;
 `;
 
 export default PostStyle;

@@ -1,32 +1,17 @@
 import React from "react"
-import { CategoryStyle } from "../../styles"
-import Profile from "./Profile"
 import { Record, List } from "immutable"
 import ImmutablePropTypes from "react-immutable-proptypes"
 import PropTypes from "prop-types"
-import { NavLink } from "react-router-dom"
 
-const CategoryComponent = ({profile, categoryList}) => {
-    const Categories = categoryList.map(category => {
-        const { header, sub } = category;
-        return (
-            <div>
-                <h1>{ header }</h1>
-                {sub.map(({id, subName}) => (
-                    <div>
-                        <NavLink exact to={`/postlist/${id}`}>
-                            { subName }
-                        </NavLink>
-                    </div>
-                ))}
-            </div>
-        )
-    })
+import { CategoryStyle } from "../../styles"
+import Profile from "./Profile"
+import CategoryList from "./CategoryList"
 
+const CategoryComponent = ({profile, categoryGroup}) => {
     return (
         <CategoryStyle>
             <Profile profile={ profile } />
-            {Categories}
+            <CategoryList categoryGroup={categoryGroup} />
         </CategoryStyle>
     );
 };
@@ -36,13 +21,13 @@ CategoryComponent.propTypes = {
         name        : PropTypes.string,
         description : PropTypes.string
     }),
-    categoryList    : ImmutablePropTypes.listOf(
+    categoryGroup   : ImmutablePropTypes.listOf(
         ImmutablePropTypes.recordOf({
-            header  : PropTypes.string,
-            sub     : ImmutablePropTypes.listOf(
+            groupName   : PropTypes.string,
+            categories  : ImmutablePropTypes.listOf(
                 ImmutablePropTypes.recordOf({
-                    id      : PropTypes.number,
-                    subName : PropTypes.string
+                    categoyId       : PropTypes.number,
+                    categoryName    : PropTypes.string
                 })
             )
         })
@@ -50,21 +35,20 @@ CategoryComponent.propTypes = {
 };
 
 CategoryComponent.defaultProps = {
-    profile         : Record({name : "no one user", description : "no description"})(),
-    categoryList    : List([
+    profile	: Record({
+        name		: "no data",
+        description	: "no data"
+    })(),
+    categoryGroup : List([
         Record({
-            header  : "Categoty header",
-            sub     : List([
+            groupName	: "no data",
+            categories	: List([
                 Record({
-                    id      : 0,
-                    subName : "category1"
-                })(),
-                Record({
-                    id      : 1,
-                    subName : "category2"
+                    categoryId		: 0,
+                    categoryName	: "no date"
                 })()
             ])
-        })()
+        })()  
     ])
 };
 
