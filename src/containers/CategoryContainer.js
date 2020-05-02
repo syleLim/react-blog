@@ -4,9 +4,7 @@ import { connect } from "react-redux"
 import { CategoryComponent } from "../component"
 
 class CategoryContainter extends React.Component {
-	
 	render () {
-		console.log(this.props)
 		return (<CategoryComponent 
 					profile={this.props.profile}
 					categoryGroup={this.props.categoryGroup}
@@ -14,12 +12,10 @@ class CategoryContainter extends React.Component {
 	}
 }
 
-const mapStateToProps = (state) => {
-	console.log(state);
-	return ({
-	profile			: state.profile,
-	categoryGroup	: state.categoryGroup
-})};
+const mapStateToProps = (state) => ({
+	profile			: state.CategoryAction.profile,
+	categoryGroup	: state.CategoryAction.categoryGroup
+});
 
 const mapDispatchToProps = (dispatch) => ({
 

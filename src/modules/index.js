@@ -1,9 +1,8 @@
 import CategoryAction from "./CategoryAction"
+import PostAction from "./PostAction"
 import { combineReducers } from "redux"
 
-export default CategoryAction
-/*
 export default combineReducers({
-	CategoryAction
+	CategoryAction,
+	PostAction
 })
-*/

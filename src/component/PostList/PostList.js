@@ -5,11 +5,12 @@ import { Record, List } from "immutable"
 import PropTypes from "prop-types"
 import PostPreview from "./PostPreview"
 
-const PostListComponent = ({postList, id}) => {
-	const posts = postList.map(post => {
-		if (post.categoryId === id)
-			return ( <PostPreview post={post}/> )
-	})
+const PostListComponent = ({categoryId, postList}) => {
+	const posts = postList.map((post, id) => 
+		( <PostPreview
+			categoryId={categoryId}
+			postId={id}
+			post={post}/> ))
 	
 	return (
 		<PostListStyle>
@@ -19,44 +20,40 @@ const PostListComponent = ({postList, id}) => {
 }
 
 PostListComponent.propTypes = {
-	id			: PropTypes.number,
+	categoryId	: PropTypes.number,
 	postList	: ImmutablePropTypes.listOf(
 		ImmutablePropTypes.recordOf({
-			categoryId	: PropTypes.number,
 			postId		: PropTypes.number,
 			title		: PropTypes.string,
+			author		: PropTypes.string,
 			date		: PropTypes.string,
-			preview		: PropTypes.string,
-			author		: PropTypes.string
+			content		: PropTypes.string
 		})
 	)
 };
 
 PostListComponent.defaultProps = {
-	id			: 0,
+	categoryId	: 0,
 	postList 	: List([
 		Record({
-			categoryId	: 0,
 			postId		: 0,
 			title		: "post1",
 			date		: "date1",
-			preview		: "preview1",
+			content		: "preview1",
 			authoor		: "auther1"
 		})(),
 		Record({
-			categoryId	: 0,
 			postId		: 1,
 			title		: "post2",
 			date		: "date2",
-			preview		: "preview2",
+			content		: "preview2",
 			authoor		: "auther2"
 		})(),
 		Record({
-			categoryId	: 1,
 			postId		: 2,
 			title		: "post3",
 			date		: "date3",
-			preview		: "preview3",
+			content		: "preview3",
 			authoor		: "auther3"
 		})()
 	])

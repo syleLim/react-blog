@@ -4,18 +4,18 @@ import { PostPreviewStyle } from "../../styles"
 import PropTypes from "prop-types"
 import ImmutablePropTypes from "react-immutable-proptypes"
 
-const PostPreview = ({post}) => {
-	const { postId, title, date, preview, author} = post;
+const PostPreview = ({categoryId, postId, post}) => {
+	const { title, author, date, content} = post;
 
 	return (
 		<PostPreviewStyle>
 			<h3>
-				<NavLink to={`/post/${postId}`}>
+				<NavLink to={`/post/${categoryId}/${postId}`}>
 					{title}
 				</NavLink>
 			</h3>
 			<h6>{date}</h6>
-			<h6>{preview}</h6>
+			<h6>{content.slice(0,4)}...</h6>
 			<p>{author}</p>
 		</PostPreviewStyle>
 	)

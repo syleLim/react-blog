@@ -3,7 +3,36 @@ import { handleActions, createAction } from "redux-actions"
 
 const actionType = "TypeName";
 
-export const createActionFunction = createAction();
+export const createActionFunction = createAction(actionType);
+
+const initialState = List([
+	List([
+		Record({
+			title	: "title1",
+			author	: "no auther1",
+			date	: "no date1",
+			content	: `Markdown format content1`
+		})(),
+		Record({
+			title	: "title2",
+			author	: "no auther2",
+			date	: "no date2",
+			content	: `Markdown format content2`
+		})()
+	]),
+	List([
+		Record({
+			title	: "title3",
+			author	: "no auther3",
+			date	: "no date3",
+			content	: `Markdown format content3`
+		})(),
+	])
+]);
+
+export default handleActions({
+	
+}, initialState);
 
 /*
 	initial state of Post structure
@@ -18,15 +47,3 @@ export const createActionFunction = createAction();
 		]
 	}
 */
-const initialState = Map({
-	0 :	List([Record({
-		postId	: 0,
-		author	: "no auther",
-		date	: "no date",
-		content	: `Markdown format content`
-	})()])
-});
-
-export default handleActions({
-	
-}, initialState);

@@ -5,6 +5,32 @@ const actionType = "temp";
 
 export const action = createAction(actionType);
 
+const initialState = Record({
+	profile	: Record({
+		name		: "user name",
+		description	: "user explain"
+	})(),
+	categoryGroup : List([
+		Record({
+			groupName	: "Group1",
+			categories	: List([
+				Record({
+					categoryId		: 0,
+					categoryName	: "category1"	
+				})(),
+				Record({
+					categoryId		: 1,
+					categoryName	: "category2"	
+				})()
+			])
+		})()
+	])
+})();
+
+export default handleActions({
+	
+}, initialState);
+
 /*
 	initial State of Catergory structure
 	Record {
@@ -25,24 +51,3 @@ export const action = createAction(actionType);
 		}
 	}
 */
-const initialState = Record({
-	profile	: Record({
-		name		: "user name",
-		description	: "user explain"
-	})(),
-	categoryGroup : List([
-		Record({
-			groupName	: "Group1",
-			categories	: List([
-				Record({
-					categoryId		: 0,
-					categoryName	: "category1"	
-				})()
-			])
-		})()
-	])
-})();
-
-export default handleActions({
-	
-}, initialState);

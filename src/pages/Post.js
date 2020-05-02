@@ -1,10 +1,12 @@
 import React from "react"
-import { PostComponent } from "../component"
+import { PostContainer } from "../containers"
 
 const PostPage = ({match}) => {
+    console.log(match.params)
     return (
-        <PostComponent 
-            id={Number(match.params.id)}
+        <PostContainer
+            categoryId={Number(match.params.categoryId)}
+            postId={Number(match.params.postId)}
         />
     );
 }

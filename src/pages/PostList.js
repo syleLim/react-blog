@@ -1,10 +1,10 @@
 import React from "react"
-import { PostListComponent } from "../component"
+import { PostListContainer } from "../containers"
 import { Route } from "react-router-dom"
 
 const PostListPage = ({match}) => {
     return (
-        <PostListComponent
+        <PostListContainer
             id={Number(match.params.id)}
         />
     );
