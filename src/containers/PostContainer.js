@@ -6,18 +6,16 @@ import { PostComponent } from "../component"
 class PostContainer extends React.Component {
 	render () {
 		const { categoryId, postId, postList } = this.props;
-		console.log(categoryId, postId);
-
+		
 		return (<PostComponent
 					post={postList.get(categoryId).get(postId)}
 				/>)
 	}
 }
 
-const mapStateToProps = (state) => {	
-	return ({
+const mapStateToProps = (state) => ({
 	postList	: state.PostAction
-})};
+});
 
 const mapDispatchToProps = (dispatch) => ({
 
