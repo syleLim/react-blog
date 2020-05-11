@@ -36,14 +36,14 @@ export default handleActions({
 
 /*
 	initial state of Post structure
-	Map {
+	List [
 		catergoryId : List [
-			Post : Record {
-				postId
+			PostId : Record {
+				title
 				author
 				date
 				content
 			}
 		]
-	}
+	]
 */

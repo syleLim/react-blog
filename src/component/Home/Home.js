@@ -1,22 +1,51 @@
 import React from "react"
-import PropTypes from "prop-types"
-import { HomeStyle } from "../../styles"
-import { Map, List, fromJS } from "immutable"
+import PropTypes			from "prop-types"
+import ImmutablePropTypes	from "react-immutable-proptypes"
+import { List, Record }		from "immutable"
+import { HomeStyle }		from "../../styles"
+import Header 				from "./Header"
+import HomePreview			from "./HomePreview"
 
-const HomeComponent = ({description}) => {
+
+const HomeComponent = ({blogTitle, blogDescription, previewItems}) => {
+	//console.log(previewItems.get(0));
 	return (
 		<HomeStyle>
-			<h1>{description}</h1>
+			<Header
+				blogTitle={blogTitle}
+				blogDescription={blogDescription}
+				/>
+			<HomePreview 
+				previewItems={previewItems}
+				/>
 		</HomeStyle>
 	)
 }
 
 HomeComponent.propTypes = {
-    description	: PropTypes.string
+	blogTitle		: PropTypes.string,
+	blogDescription	: PropTypes.string,
+	previewItems	: ImmutablePropTypes.listOf(
+		ImmutablePropTypes.recordOf({
+			title		: PropTypes.string,
+			author		: PropTypes.string,
+			date		: PropTypes.string,
+			content		: PropTypes.string
+		})
+	)
 };
 
 HomeComponent.defaultProps = {
-    description	: "Main description"
+	blogTitle		: "no title",
+	blogDescription	: "no description",
+	previewItems	: List([
+		Record({
+			titile	: "no item",
+			author	: "no author",
+			date	: "no date",
+			content	: "no content"
+		})()
+	])
 };
 
 export default HomeComponent;

@@ -19,8 +19,8 @@ const PostCompoenet = ({post}) => {
 
 PostCompoenet.propTypes = {
 	post	: ImmutablePropTyps.recordOf({
-				postId	: PropTypes.number,
 				title	: PropTypes.string,
+				author		: "auther3",
 				date	: PropTypes.string,
 				content	: PropTypes.string
 			})
@@ -28,8 +28,8 @@ PostCompoenet.propTypes = {
 
 PostCompoenet.defaultProps = {
 	post 	: Record({
-				postId	: 0,
 				title	: "postId 0",
+				author		: "auther3",
 				date	: "post 0 date",
 				content	: `no data`
 			})()

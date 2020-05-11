@@ -1,8 +1,6 @@
 import React from "react"
 import { NavLink } from "react-router-dom";
 import { PostPreviewStyle } from "../../styles"
-import PropTypes from "prop-types"
-import ImmutablePropTypes from "react-immutable-proptypes"
 
 const PostPreview = ({categoryId, postId, post}) => {
 	const { title, author, date, content} = post;

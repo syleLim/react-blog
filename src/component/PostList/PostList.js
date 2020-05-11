@@ -23,7 +23,6 @@ PostListComponent.propTypes = {
 	categoryId	: PropTypes.number,
 	postList	: ImmutablePropTypes.listOf(
 		ImmutablePropTypes.recordOf({
-			postId		: PropTypes.number,
 			title		: PropTypes.string,
 			author		: PropTypes.string,
 			date		: PropTypes.string,
@@ -36,25 +35,22 @@ PostListComponent.defaultProps = {
 	categoryId	: 0,
 	postList 	: List([
 		Record({
-			postId		: 0,
 			title		: "post1",
 			date		: "date1",
 			content		: "preview1",
-			authoor		: "auther1"
+			author		: "auther1"
 		})(),
 		Record({
-			postId		: 1,
 			title		: "post2",
 			date		: "date2",
 			content		: "preview2",
-			authoor		: "auther2"
+			author		: "auther2"
 		})(),
 		Record({
-			postId		: 2,
 			title		: "post3",
 			date		: "date3",
 			content		: "preview3",
-			authoor		: "auther3"
+			author		: "auther3"
 		})()
 	])
 };
