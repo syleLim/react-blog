@@ -8,10 +8,10 @@ class App extends React.Component {
     render () {
         return (
             <AppStyle>
-                <CategoryContainer />
                 <Route exact path="/" component={HomePage}/>
                 <Route exact path="/postlist/:id" component={PostListPage}/>
                 <Route path="/post/:categoryId/:postId" component={PostPage}/>
+                <CategoryContainer />
             </AppStyle>
         )
     };

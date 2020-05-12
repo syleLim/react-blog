@@ -1,8 +1,9 @@
 import styles from "styled-components"
 
 const HeaderStyle = styles.div`
-	width				: 100%;
-	height				: 30%;
+	float				: left;
+	margin				: 1%;
+	width				: 98%;
 	background-color	: #1145ff;
 	text-align			: center;
 `

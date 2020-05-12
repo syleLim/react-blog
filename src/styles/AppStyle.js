@@ -1,7 +1,7 @@
 import styles from "styled-components"
 
 const AppStyle = styles.div`
-	width		: 500px;
+	height	: 50rem;
 `;
 
 export default AppStyle;
