@@ -1,10 +1,8 @@
 import styles from "styled-components"
 
 const HomeStyle = styles.div`
-	background	: #00ff00;
-	float		: left;
-	margin		: 2rem;
-	padding		: 2rem;
+	width				: 1000px;
+	background-color	: #00ff00;
 `;
 
 export default HomeStyle;

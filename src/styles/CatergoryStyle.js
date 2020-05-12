@@ -1,10 +1,8 @@
 import styles from "styled-components"
 
 const CategoryStyle = styles.div`
-	width			: 20%;
-	float			: left;
-	padding			: 2rem;
-	margin			: 2rem;
+	width			: 300px;
+	float			: right;
 	background		: #ff0000;
 `;
 

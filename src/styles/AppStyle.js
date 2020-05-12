@@ -1,7 +1,7 @@
 import styles from "styled-components"
 
 const AppStyle = styles.div`
-	width		: 100%;
+	width		: 500px;
 `;
 
 export default AppStyle;
