@@ -1,25 +1,30 @@
 import React 	from "react"
+import { NavLink } from "react-router-dom";
 import { List }	from "immutable"
 
 import { Line, 
 			HomePreviewStyle } 	from "../../styles"
-import { HomePreviewBoxStyle,
-			HomePreviewAuther,
-			HomePreviewContent,
-			HomePreviewDate,
-			HomePreviewTitle}	from "../../styles"
+import { PreviewBoxStyle,
+			PreviewAuther,
+			PreviewContent,
+			PreviewDate,
+			PreviewTitle}	from "../../styles"
 
 const HomePreview = ({previewItems}) => {
 	const previewList = previewItems.map(item => {
-		const { title,  author, date, content} = item
+		const { categoryId, postId, title,  author, date, content } = item
 		return (
 			<div>
-				<HomePreviewBoxStyle>
-					<HomePreviewTitle>{title}</HomePreviewTitle>
-					<HomePreviewAuther>{author}</HomePreviewAuther>
-					<HomePreviewDate>{date}</HomePreviewDate>
-					<HomePreviewContent>{content.slice(0,4)}</HomePreviewContent>
-				</HomePreviewBoxStyle>
+				<PreviewBoxStyle>
+					<PreviewTitle>
+						<NavLink to={`/post/${categoryId}/${postId}`}>
+							{title}
+						</NavLink>
+					</PreviewTitle>
+					<PreviewAuther>{author}</PreviewAuther>
+					<PreviewDate>{date}</PreviewDate>
+					<PreviewContent>{content.slice(0,4)}</PreviewContent>
+				</PreviewBoxStyle>
 				<Line/>
 			</div>
 		)

@@ -19,19 +19,23 @@ const PostCompoenet = ({post}) => {
 
 PostCompoenet.propTypes = {
 	post	: ImmutablePropTyps.recordOf({
-				title	: PropTypes.string,
-				author		: "auther3",
-				date	: PropTypes.string,
-				content	: PropTypes.string
+				categoryId	: PropTypes.number,
+				postId		: PropTypes.number,
+				title		: PropTypes.string,
+				author		: PropTypes.string,
+				date		: PropTypes.string,
+				content		: PropTypes.string
 			})
 };
 
 PostCompoenet.defaultProps = {
 	post 	: Record({
-				title	: "postId 0",
+				categoryId	: 0,
+				postId		: 0,
+				title		: "postId 0",
 				author		: "auther3",
-				date	: "post 0 date",
-				content	: `no data`
+				date		: "post 0 date",
+				content		: `no data`
 			})()
 };
 

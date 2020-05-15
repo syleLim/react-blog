@@ -8,7 +8,6 @@ import HomePreview			from "./HomePreview"
 
 
 const HomeComponent = ({blogTitle, blogDescription, previewItems}) => {
-	//console.log(previewItems.get(0));
 	return (
 		<HomeStyle>
 			<Header
