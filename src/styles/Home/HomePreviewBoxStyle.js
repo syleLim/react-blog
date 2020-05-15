@@ -1,10 +1,10 @@
 import styles from "styled-components"
 
 const HomePreviewBoxStyle = styles.div`
-	width				: 92%;
-	margin				: 1%;
-	padding				: 3%;
+	width				: 94%;
+	margin				: 2%;
+	padding				: 1%;
 	float				: left;
-	background-color	: #249234;
+	background-color	: #F0FFFF;
 `
 export default HomePreviewBoxStyle;

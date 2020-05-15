@@ -2,9 +2,9 @@ import styles from "styled-components"
 
 const HeaderStyle = styles.div`
 	float				: left;
-	margin				: 1%;
-	width				: 98%;
-	background-color	: #1145ff;
+	width				: 100%;
+	height				: 20%;
+	background-color	: #00008B;
 	text-align			: center;
 `
 export default HeaderStyle;

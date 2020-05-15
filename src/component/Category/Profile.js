@@ -1,5 +1,5 @@
 import React from "react"
-import { ProfileStyle } from "../../styles"
+import { ProfileStyle, User, Description } from "../../styles"
 import { Record } from "immutable"
 import PropTypes from "prop-types";
 
@@ -8,8 +8,8 @@ const Profile = ({profile}) => {
 
 	return (
 		<ProfileStyle>
-			<h1>{name}</h1>
-			{description}
+			<User>{name}</User>
+			<Description>{description}</Description>
 		</ProfileStyle>
 	);
 }
