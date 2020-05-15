@@ -1,23 +1,34 @@
-import React from "react"
-import { HomePreviewStyle, HomePreviewBoxStyle } from "../../styles"
-import { List } from "immutable"
+import React 	from "react"
+import { List }	from "immutable"
+
+import { Line, 
+			HomePreviewStyle } 	from "../../styles"
+import { HomePreviewBoxStyle,
+			HomePreviewAuther,
+			HomePreviewContent,
+			HomePreviewDate,
+			HomePreviewTitle}	from "../../styles"
 
 const HomePreview = ({previewItems}) => {
 	const previewList = previewItems.map(item => {
 		const { title,  author, date, content} = item
 		return (
-			<HomePreviewBoxStyle>
-				<h1>{title}</h1>
-				<p>{author}</p>
-				<p>{date}</p>
-				<p>{content.slice(0,4)}</p>
-			</HomePreviewBoxStyle>
+			<div>
+				<HomePreviewBoxStyle>
+					<HomePreviewTitle>{title}</HomePreviewTitle>
+					<HomePreviewAuther>{author}</HomePreviewAuther>
+					<HomePreviewDate>{date}</HomePreviewDate>
+					<HomePreviewContent>{content.slice(0,4)}</HomePreviewContent>
+				</HomePreviewBoxStyle>
+				<Line/>
+			</div>
 		)
 	})
 
 	return (
 		<HomePreviewStyle>
 			{previewList}
+			
 		</HomePreviewStyle>
 	)
 }

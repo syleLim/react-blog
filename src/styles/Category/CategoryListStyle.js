@@ -5,7 +5,12 @@ const CategoryListStyle = styles.div`
 	padding		: 2%;
 	float		: left;
 	margin-top	: 1rem;
-	border		: 1px solid black;
 `;
 
-export default CategoryListStyle;
+const GroupName = styles.h1`
+	font-size			: 1.4rem;
+	margin-block-start	: 0;
+	margin-block-end	: 0;
+`;
+
+export { CategoryListStyle, GroupName };

@@ -12,7 +12,11 @@ const initialState = Record({
 		Record({
 			categoryId	: 0,
 			postId		: 0
-		})()
+		})(),
+		Record({
+			categoryId	: 1,
+			postId		: 0
+		})(),
 	])
 })()
 

@@ -4,4 +4,9 @@ const CategoryGroupStyle = styles.div`
 			
 `;
 
-export default CategoryGroupStyle;
+const Item = styles.div`
+	margin-block-start		: 0.1rem;
+	margin-inline-start		: 1rem;
+`;
+
+export { CategoryGroupStyle, Item };

@@ -4,7 +4,18 @@ const HeaderStyle = styles.div`
 	float				: left;
 	width				: 100%;
 	height				: 20%;
-	background-color	: #00008B;
+	background-color	: #F4A460;
 	text-align			: center;
 `
-export default HeaderStyle;
+
+const BlogTitle = styles.h1`
+	margin-block-start		: 1rem;
+	margin-block-end		: 0.3rem;
+	font-size				: 3rem;
+`
+const BlogDescription = styles.p`
+	
+`;
+
+
+export { HeaderStyle, BlogTitle, BlogDescription };

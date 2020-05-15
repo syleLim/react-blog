@@ -23,6 +23,19 @@ const initialState = Record({
 					categoryName	: "category2"	
 				})()
 			])
+		})(),
+		Record({
+			groupName	: "Group2",
+			categories	: List([
+				Record({
+					categoryId		: 0,
+					categoryName	: "category3"	
+				})(),
+				Record({
+					categoryId		: 1,
+					categoryName	: "category4"	
+				})()
+			])
 		})()
 	])
 })();
