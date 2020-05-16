@@ -1,5 +1,5 @@
 import React from "react"
-import { HeaderStyle, BlogTitle, blogDescription, BlogDescription } from "../../styles"
+import { HeaderStyle, BlogTitle, BlogDescription } from "../../styles"
 
 const Header = ({blogTitle, blogDescription}) => (
 	<HeaderStyle>

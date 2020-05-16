@@ -3,7 +3,7 @@ import PropTypes			from "prop-types"
 import ImmutablePropTypes	from "react-immutable-proptypes"
 import { List, Record }		from "immutable"
 import { HomeStyle }		from "../../styles"
-import Header 				from "./Header"
+import Header 				from "../Header/Header"
 import HomePreview			from "./HomePreview"
 
 

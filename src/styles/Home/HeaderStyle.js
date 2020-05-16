@@ -3,7 +3,7 @@ import styles from "styled-components"
 const HeaderStyle = styles.div`
 	float				: left;
 	width				: 100%;
-	height				: 20%;
+	height				: 10rem;
 	background-color	: #F4A460;
 	text-align			: center;
 `

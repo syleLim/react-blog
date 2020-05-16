@@ -2,12 +2,13 @@ import styles from "styled-components"
 import { NavLink } from "react-router-dom";
 
 const PreviewBoxStyle = styles.div`
-	width				: 91.5%;
-	margin				: 2%;
-	padding-left		: 4%;
+	width				: calc(100% - 3.25rem);
+	height				: 15rem;
+	margin				: 1rem;
+	padding-left		: 1rem;
 	float				: left;
 	background-color	: #F0FFFF;
-	border				: 0.1rem solid black;
+	border				: 0.1rem dashed grey;
 	border-radius		: 0.7rem;
 `
 

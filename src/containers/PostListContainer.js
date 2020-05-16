@@ -5,16 +5,19 @@ import { PostListComponent } from "../component"
 
 class PostListContainer extends React.Component {
 	render () {
-		const { id, postList } = this.props;
+		const { id, blogTitle, blogDescription, postList } = this.props;
 
 		return (<PostListComponent
-					categoryId={id}
+					blogTitle={blogTitle}
+					blogDescription={blogDescription}
 					postList={postList.get(id)} />)
 	}
 }
 
-const mapStateToProps = (state) => ({	
-	postList	: state.PostAction
+const mapStateToProps = (state) => ({
+	blogTitle		: state.HomeAction.blogTitle,
+	blogDescription	: state.HomeAction.blogDescription,
+	postList		: state.PostAction
 });
 
 const mapDispatchToProps = (dispatch) => ({

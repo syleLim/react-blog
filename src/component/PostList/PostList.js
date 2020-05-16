@@ -1,24 +1,30 @@
-import React from "react"
-import { PostListStyle } from "../../styles"
-import ImmutablePropTypes from "react-immutable-proptypes"
-import { Record, List } from "immutable"
-import PropTypes from "prop-types"
-import PostPreview from "./PostPreview"
+import React 				from "react"
+import ImmutablePropTypes 	from "react-immutable-proptypes"
+import { Record, List } 	from "immutable"
+import PropTypes			from "prop-types"
 
-const PostListComponent = ({categoryId, postList}) => {
-	const posts = postList.map((post, id) => 
+import { PostListStyle }	from "../../styles"
+import PostPreview			from "./PostPreview"
+import Header				from "../Header/Header"
+
+const PostListComponent = ({blogTitle, blogDescription, postList}) => {
+	const posts = postList.map((post) => 
 		( <PostPreview
 			post={post}/> ))
 	
 	return (
 		<PostListStyle>
+			<Header
+				blogTitle={blogTitle}
+				blogDescription={blogDescription}/>
 			{posts}
 		</PostListStyle>
 	)
 }
 
 PostListComponent.propTypes = {
-	categoryId	: PropTypes.number,
+	blogTitle		: PropTypes.string,
+	blogDescription	: PropTypes.string,
 	postList	: ImmutablePropTypes.listOf(
 		ImmutablePropTypes.recordOf({
 			categoryId	: PropTypes.number,
@@ -32,7 +38,8 @@ PostListComponent.propTypes = {
 };
 
 PostListComponent.defaultProps = {
-	categoryId	: 0,
+	blogTitle		: "dont connect",
+	blogDescription	: "dont connect",
 	postList 	: List([
 		Record({
 			categoryId	: 0,

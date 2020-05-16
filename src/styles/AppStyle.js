@@ -1,7 +1,8 @@
 import styles from "styled-components"
 
 const AppStyle = styles.div`
-	height	: 50rem;
+	overflow	: auto;
+	display		: flex;
 `;
 
 export default AppStyle;

@@ -3,6 +3,7 @@ import styles from "styled-components"
 const ProfileStyle = styles.div`
 	text-align			: center;
 	margin				: 0 auto;
+	margin-top			: 2rem;
 	width				: 10rem;
 	height				: 10rem;
 `;
