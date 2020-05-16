@@ -1,15 +1,20 @@
 import React from "react"
 import { List, Record } from "immutable"
-import { CategoryListStyle, CategoryGroupStyle, Item, GroupName } from "../../styles"
+
+import { CategoryListStyle,
+			CategoryGroupStyle,
+			Item,
+			GroupName,
+			CategroyLink } from "../../styles"
 import { NavLink } from "react-router-dom" 
 
 const Category = ({categoies}) => (
 	<CategoryGroupStyle>
 		{categoies.map(({ categoryId, categoryName }) => (
 			<Item>
-				<NavLink exact to={`/postlist/${categoryId}`}>
+				<CategroyLink exact to={`/postlist/${categoryId}`}>
 					{categoryName}
-				</NavLink>
+				</CategroyLink>
 			</Item>
 		))}
 	</CategoryGroupStyle>

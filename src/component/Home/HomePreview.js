@@ -8,7 +8,8 @@ import { PreviewBoxStyle,
 			PreviewAuther,
 			PreviewContent,
 			PreviewDate,
-			PreviewTitle}	from "../../styles"
+			PreviewTitle,
+			StyleLink }	from "../../styles"
 
 const HomePreview = ({previewItems}) => {
 	const previewList = previewItems.map(item => {
@@ -17,9 +18,9 @@ const HomePreview = ({previewItems}) => {
 			<div>
 				<PreviewBoxStyle>
 					<PreviewTitle>
-						<NavLink to={`/post/${categoryId}/${postId}`}>
+						<StyleLink to={`/post/${categoryId}/${postId}`}>
 							{title}
-						</NavLink>
+						</StyleLink>
 					</PreviewTitle>
 					<PreviewAuther>{author}</PreviewAuther>
 					<PreviewDate>{date}</PreviewDate>

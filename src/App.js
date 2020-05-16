@@ -1,6 +1,6 @@
 import React from "react"
 import { Route } from "react-router-dom"
-import { AppStyle } from "./styles"
+import { AppStyle, GlobalStyles } from "./styles"
 import { HomePage, PostListPage, PostPage } from "./pages"
 import { CategoryContainer } from "./containers"
 

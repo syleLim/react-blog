@@ -5,6 +5,7 @@ import { Provider } from "react-redux"
 
 import App from "./App"
 import modules from "./modules"
+import { GlobalStyles } from "./styles"
 
 const store = createStore(modules)
 

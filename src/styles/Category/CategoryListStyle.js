@@ -1,8 +1,7 @@
 import styles from "styled-components"
 
 const CategoryListStyle = styles.div`
-	width		: 96%;
-	padding		: 2%;
+	width		: 100%;
 	float		: left;
 	margin-top	: 1rem;
 `;
@@ -10,6 +9,7 @@ const CategoryListStyle = styles.div`
 const GroupName = styles.h1`
 	font-size			: 1.4rem;
 	margin-block-start	: 0;
+	margin-inline-start	: 1rem;
 	margin-block-end	: 0;
 `;
 

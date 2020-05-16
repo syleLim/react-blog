@@ -5,7 +5,8 @@ import { PreviewBoxStyle,
 			PreviewTitle,
 			PreviewAuther,
 			PreviewDate,
-			PreviewContent }	from "../../styles"
+			PreviewContent,
+			StyleLink }	from "../../styles"
 
 const PostPreview = ({post}) => {
 	const { categoryId, postId, title, author, date, content} = post;
@@ -13,9 +14,9 @@ const PostPreview = ({post}) => {
 	return (
 		<PreviewBoxStyle>
 			<PreviewTitle>
-				<NavLink to={`/post/${categoryId}/${postId}`}>
+				<StyleLink to={`/post/${categoryId}/${postId}`}>
 					{title}
-				</NavLink>
+				</StyleLink>
 			</PreviewTitle>
 			<PreviewAuther>{author}</PreviewAuther>
 			<PreviewDate>{date}</PreviewDate>

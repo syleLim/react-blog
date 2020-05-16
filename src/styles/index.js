@@ -7,14 +7,21 @@ export { PreviewBoxStyle,
 			PreviewAuther,
 			PreviewContent,
 			PreviewDate,
-			PreviewTitle }					from "./Preview/PreviewStyle"
+			PreviewTitle,
+			StyleLink }					from "./Preview/PreviewStyle"
 
 export { default as CategoryStyle } 		from "./Category/CategoryStyle"
 export { ProfileStyle, User, Description }	from "./Category/ProfileStyle"
 export { CategoryListStyle, GroupName }		from "./Category/CategoryListStyle"
-export { CategoryGroupStyle, Item }			from "./Category/CategoryGroupStyle"
+export { CategoryGroupStyle,
+			Item,
+			CategroyLink }					from "./Category/CategoryGroupStyle"
 
-export { default as PostStyle }     		from "./Post/PostStyle"
+export { PostStyle,
+		 PostTitle, 
+		 PostDate, 
+		 PostContent } 						from "./Post/PostStyle"
 export { default as PostListStyle } 		from "./Post/PostListStyle"
 
 export { default as AppStyle }				from "./AppStyle"
+

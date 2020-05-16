@@ -1,8 +1,10 @@
 import styles from "styled-components"
 
 const ProfileStyle = styles.div`
-	width	: 100%;
-	float	: left;
+	text-align			: center;
+	margin				: 0 auto;
+	width				: 10rem;
+	height				: 10rem;
 `;
 
 const User = styles.h1`

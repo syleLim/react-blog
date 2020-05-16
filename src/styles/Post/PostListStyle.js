@@ -2,7 +2,7 @@ import styles from "styled-components"
 
 const PostListStyle = styles.div`
 	float		: left;
-	width		: 75%;
+	width		: calc(100% - 15rem);
 	height		: 100%;
 	background	: #F5DEB3;	
 `;

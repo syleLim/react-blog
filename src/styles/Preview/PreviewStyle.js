@@ -1,4 +1,5 @@
 import styles from "styled-components"
+import { NavLink } from "react-router-dom";
 
 const PreviewBoxStyle = styles.div`
 	width				: 91.5%;
@@ -37,4 +38,12 @@ const PreviewContent = styles.p`
 	font-size			: 1rem;
 `;
 
-export { PreviewBoxStyle, PreviewTitle, PreviewAuther, PreviewDate, PreviewContent };
+const StyleLink = styles(NavLink)`
+	text-decoration		: none;
+	&:focus, &:hover, &:visited, &:link, &:active {
+		text-decoration: none;
+		color			: black;
+    }
+`
+
+export { PreviewBoxStyle, PreviewTitle, PreviewAuther, PreviewDate, PreviewContent, StyleLink };
