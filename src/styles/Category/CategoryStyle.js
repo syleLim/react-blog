@@ -4,7 +4,7 @@ const CategoryStyle = styles.div`
 	width			: 15rem;
 	float			: right;
 	background		: white;
-	box-shadow		: -2px 0px 6px black;
+	box-shadow		: -3px 3px 5px grey;
 `;
 
 export default CategoryStyle;

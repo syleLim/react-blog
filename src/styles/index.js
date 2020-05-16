@@ -1,7 +1,7 @@
 export { default as HomeStyle }				from "./Home/HomeStyle"
-export { HeaderStyle,
+export { TitleStyle,
 			BlogDescription,
-			BlogTitle }						from "./Home/HeaderStyle"
+			BlogTitle }						from "./Title/TitleStyle"
 export { HomePreviewStyle,	Line }			from "./Home/HomePreviewStyle"
 export { PreviewBoxStyle,
 			PreviewAuther,
@@ -18,10 +18,12 @@ export { CategoryGroupStyle,
 			CategroyLink }					from "./Category/CategoryGroupStyle"
 
 export { PostStyle,
-		 PostTitle, 
+		 PostTitle,
 		 PostDate, 
 		 PostContent } 						from "./Post/PostStyle"
 export { default as PostListStyle } 		from "./Post/PostListStyle"
+
+export { FooterStyle, FooterContent }		from "./Footer/FooterStyle"
 
 export { default as AppStyle }				from "./AppStyle"
 

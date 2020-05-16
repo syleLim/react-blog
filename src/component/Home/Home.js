@@ -3,14 +3,14 @@ import PropTypes			from "prop-types"
 import ImmutablePropTypes	from "react-immutable-proptypes"
 import { List, Record }		from "immutable"
 import { HomeStyle }		from "../../styles"
-import Header 				from "../Header/Header"
+import Title 				from "../Title/Title"
 import HomePreview			from "./HomePreview"
 
 
 const HomeComponent = ({blogTitle, blogDescription, previewItems}) => {
 	return (
 		<HomeStyle>
-			<Header
+			<Title
 				blogTitle={blogTitle}
 				blogDescription={blogDescription}
 				/>

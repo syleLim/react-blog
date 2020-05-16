@@ -1,6 +1,6 @@
 import styles from "styled-components"
 
-const HeaderStyle = styles.div`
+const TitleStyle = styles.div`
 	float				: left;
 	width				: 100%;
 	height				: 10rem;
@@ -18,4 +18,4 @@ const BlogDescription = styles.p`
 `;
 
 
-export { HeaderStyle, BlogTitle, BlogDescription };
+export { TitleStyle, BlogTitle, BlogDescription };

@@ -5,7 +5,7 @@ import PropTypes			from "prop-types"
 
 import { PostListStyle }	from "../../styles"
 import PostPreview			from "./PostPreview"
-import Header				from "../Header/Header"
+import Title				from "../Title/Title"
 
 const PostListComponent = ({blogTitle, blogDescription, postList}) => {
 	const posts = postList.map((post) => 
@@ -14,7 +14,7 @@ const PostListComponent = ({blogTitle, blogDescription, postList}) => {
 	
 	return (
 		<PostListStyle>
-			<Header
+			<Title
 				blogTitle={blogTitle}
 				blogDescription={blogDescription}/>
 			{posts}

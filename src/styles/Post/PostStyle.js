@@ -2,9 +2,9 @@ import styles from "styled-components"
 
 const PostStyle = styles.div`
 	float		: left;
-	width		: calc(100% - 15rem);
+	width		: calc(100% - 16rem);
 	height		: 100%;
-	background	: #00ffff;
+	background	: #ffffff;
 `;
 
 const PostTitle = styles.h1`
