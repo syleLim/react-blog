@@ -6,6 +6,7 @@ const AppStyle = styles.div`
 	box-shadow		: 0 0 10px black;
 	overflow		: auto;
 	display			: flex;
+	background		: #FAFAFA;
 `;
 
 export default AppStyle;

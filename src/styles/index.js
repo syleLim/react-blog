@@ -20,7 +20,8 @@ export { CategoryGroupStyle,
 export { PostStyle,
 		 PostTitle,
 		 PostDate, 
-		 PostContent } 						from "./Post/PostStyle"
+		 PostContent,
+		 PostAuthor } 						from "./Post/PostStyle"
 export { default as PostListStyle } 		from "./Post/PostListStyle"
 export { PostPreviewStyle }					from "./Post/PostPreviewStyle"
 

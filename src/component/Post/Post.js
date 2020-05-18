@@ -6,17 +6,21 @@ import { List, Record }		from "immutable"
 import { PostStyle,
 			PostTitle, 
 			PostDate, 
-			PostContent }	from "../../styles"
+			PostContent,
+			PostAuthor,
+			Line }	from "../../styles"
 import { MarkDown } 		from "../../lib"
 
 
 const PostCompoenet = ({post}) => {
+	const { title, author, date, content } = post;
 	return (
 		<PostStyle>
-			<PostTitle>{post.title}</PostTitle>
-			<PostDate>{post.date}</PostDate>
+			<PostTitle>{title}</PostTitle>
+			<PostAuthor>{author}</PostAuthor>
+			<PostDate>{date}</PostDate>
 			<PostContent>
-				<MarkDown content={post.content} />
+				<MarkDown content={content} />
 			</PostContent>
 		</PostStyle>
 	)
