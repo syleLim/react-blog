@@ -18,8 +18,8 @@ const initialState = List([
 \`\`\`
 	code block
 \`\`\`
-- **list**
-- **list**
+- **list1**
+- **list2**
 - \`inline block\`
 <br><br>
 `

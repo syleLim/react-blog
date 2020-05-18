@@ -1,14 +1,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 import ReactMarkDown from "react-markdown"
-import { previewHeader } from "./MarkDownStyle"
+import { previewText,
+		 previewCodeBlock,
+		 previewInlineCodeBlock,
+		 previewHeader } from "./MarkDownStyle"
 
 const PreviewMarkDown = ({content}) => {
 	return (
-		<ReactMarkDown source={content} 
+		<ReactMarkDown source={content}
+							skipHtml={false}
+							escapeHtml={false}
 							renderers={{
-								heading	: previewHeader,
-								
+								text		: previewText,
+								heading		: previewHeader,
+								code		: previewCodeBlock,
+								inlineCode	: previewInlineCodeBlock
 							}}/>
 	)
 }

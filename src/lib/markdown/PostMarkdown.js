@@ -6,6 +6,8 @@ import { inlineCodeBlock, codeBlock } from "./MarkDownStyle"
 const PostMarkDown = ({content}) => {
 	return (
 		<ReactMarkDown source={content}
+					skipHtml={false}
+					escapeHtml={false}
 					renderers={{ 
 								code		: codeBlock,
 								inlineCode	: inlineCodeBlock
