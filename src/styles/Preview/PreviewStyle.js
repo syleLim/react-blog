@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const PreviewBoxStyle = styles.div`
 	width				: calc(100% - 3rem);
-	height				: 15rem;
+	min-height			: 15rem;
 	margin				: 1rem;
 	padding-left		: 1rem;
 	float				: left;
@@ -39,12 +39,10 @@ const PreviewDate = styles.p`
 	color				: black;
 `;
 
-const PreviewContent = styles.p`
+const PreviewContent = styles.div`
 	float				: left;
 	margin-block-start	: 0.5rem;
 	padding-left		: 1rem;
-	
-	font-size			: 1.2rem;
 `;
 
 const StyleLink = styles(NavLink)`

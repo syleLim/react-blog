@@ -1,6 +1,7 @@
 import React 	from "react"
 import { NavLink } from "react-router-dom";
 import { List }	from "immutable"
+import { PreviewMarkDown } from "../../lib"
 
 import { Line, 
 			HomePreviewStyle } 	from "../../styles"
@@ -25,7 +26,9 @@ const HomePreview = ({previewItems}) => {
 							{title}
 						</StyleLink>
 					</PreviewTitle>
-					<PreviewContent>{content.slice(0,4)}</PreviewContent>
+					<PreviewContent>
+						<PreviewMarkDown content={content} />
+					</PreviewContent>
 				</PreviewBoxStyle>
 			</div>
 		)

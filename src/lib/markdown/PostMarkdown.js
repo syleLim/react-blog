@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import ReactMarkDown from "react-markdown"
 import { inlineCodeBlock, codeBlock } from "./MarkDownStyle"
 
-const MarkDown = ({content}) => {
+const PostMarkDown = ({content}) => {
 	return (
 		<ReactMarkDown source={content}
 					renderers={{ 
@@ -13,8 +13,8 @@ const MarkDown = ({content}) => {
 	)
 }
 
-MarkDown.propTypes = {
+PostMarkDown.propTypes = {
 	content	: PropTypes.string
 }
 
-export default MarkDown;
+export default PostMarkDown;

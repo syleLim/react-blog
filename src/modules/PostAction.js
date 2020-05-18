@@ -1,6 +1,5 @@
 import { Map, List, Record } from "immutable"
 import { handleActions, createAction } from "redux-actions"
-
 const actionType = "TypeName";
 
 export const createActionFunction = createAction(actionType);
@@ -13,7 +12,17 @@ const initialState = List([
 			title		: "title1",
 			author		: "no auther1",
 			date		: "no date1",
-			content		: `Markdown format content1`
+			content		: `# Test MarkDown
+## test header
+### testtest
+\`\`\`
+	code block
+\`\`\`
+- **list**
+- **list**
+- \`inline block\`
+<br><br>
+`
 		})(),
 		Record({
 			categoryId	: 0,

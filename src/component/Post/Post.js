@@ -8,8 +8,8 @@ import { PostStyle,
 			PostDate, 
 			PostContent,
 			PostAuthor,
-			Line }	from "../../styles"
-import { MarkDown } 		from "../../lib"
+			Line }		from "../../styles"
+import { PostMarkDown }	from "../../lib"
 
 
 const PostCompoenet = ({post}) => {
@@ -20,7 +20,7 @@ const PostCompoenet = ({post}) => {
 			<PostAuthor>{author}</PostAuthor>
 			<PostDate>{date}</PostDate>
 			<PostContent>
-				<MarkDown content={content} />
+				<PostMarkDown content={content} />
 			</PostContent>
 		</PostStyle>
 	)
