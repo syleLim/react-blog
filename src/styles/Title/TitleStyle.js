@@ -2,9 +2,13 @@ import styles from "styled-components"
 
 const TitleStyle = styles.div`
 	float				: left;
-	width				: 100%;
+	width				: calc(100% - 2em);
 	height				: 10rem;
-	background-color	: #F4A460;
+	background-color	: #F7F7F7;
+	margin-block-start	: 1rem;
+	margin-inline-start	: 1rem;
+	margin-inline-end	: 1rem;
+	border-radius		: 1rem;
 	text-align			: center;
 `
 

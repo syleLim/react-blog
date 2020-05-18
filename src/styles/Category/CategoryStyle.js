@@ -4,7 +4,11 @@ const CategoryStyle = styles.div`
 	width			: 15rem;
 	float			: right;
 	background		: white;
-	box-shadow		: -3px 3px 5px grey;
+	box-shadow		: 0 0 10px grey;
+	
+	@media only screen and (max-width: 768px) {
+		display			: none;
+	}
 `;
 
 export default CategoryStyle;

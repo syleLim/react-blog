@@ -16,25 +16,24 @@ const HomePreview = ({previewItems}) => {
 		const { categoryId, postId, title,  author, date, content } = item
 		return (
 			<div>
+				<Line/>
 				<PreviewBoxStyle>
+					<PreviewAuther>{author}</PreviewAuther>
+					<PreviewDate>/ {date}</PreviewDate>
 					<PreviewTitle>
 						<StyleLink to={`/post/${categoryId}/${postId}`}>
 							{title}
 						</StyleLink>
 					</PreviewTitle>
-					<PreviewAuther>{author}</PreviewAuther>
-					<PreviewDate>{date}</PreviewDate>
 					<PreviewContent>{content.slice(0,4)}</PreviewContent>
 				</PreviewBoxStyle>
-				<Line/>
 			</div>
 		)
 	})
 
 	return (
 		<HomePreviewStyle>
-			{previewList}
-			
+			{previewList}	
 		</HomePreviewStyle>
 	)
 }

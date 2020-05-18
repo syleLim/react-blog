@@ -7,7 +7,7 @@ const FooterStyle = styles.div`
 	background		: black;
 	width			: 100%;
 	border-top		: 0.2rem white;
-	box-shadow		: 0 5px 5px grey
+	box-shadow		: 0 0 6px grey
 `;
 
 const FooterContent = styles.p`

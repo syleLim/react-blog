@@ -8,16 +8,14 @@ import PostPreview			from "./PostPreview"
 import Title				from "../Title/Title"
 
 const PostListComponent = ({blogTitle, blogDescription, postList}) => {
-	const posts = postList.map((post) => 
-		( <PostPreview
-			post={post}/> ))
 	
 	return (
 		<PostListStyle>
 			<Title
 				blogTitle={blogTitle}
 				blogDescription={blogDescription}/>
-			{posts}
+			<PostPreview 
+				previewItems={postList} />
 		</PostListStyle>
 	)
 }

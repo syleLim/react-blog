@@ -1,28 +1,39 @@
 import React from "react"
 import { NavLink } from "react-router-dom";
 
-import { PreviewBoxStyle,
+import { PostPreviewStyle,
+			PreviewBoxStyle,
 			PreviewTitle,
 			PreviewAuther,
 			PreviewDate,
 			PreviewContent,
-			StyleLink }	from "../../styles"
+			StyleLink,
+			Line }	from "../../styles"
 
-const PostPreview = ({post}) => {
-	const { categoryId, postId, title, author, date, content} = post;
-
+const PostPreview = ({previewItems}) => {
+	const previewList = previewItems.map(item => {
+		const { categoryId, postId, title, author, date, content} = item;
+		return (
+			<div>
+				<Line />
+				<PreviewBoxStyle>
+					<PreviewAuther>{author}</PreviewAuther>
+					<PreviewDate> / {date}</PreviewDate>
+					<PreviewTitle>
+						<StyleLink to={`/post/${categoryId}/${postId}`}>
+							{title}
+						</StyleLink>
+					</PreviewTitle>
+					<PreviewContent>{content.slice(0,4)}...</PreviewContent>				
+				</PreviewBoxStyle>
+			</div>
+		)
+	})
+	
 	return (
-		<PreviewBoxStyle>
-			<PreviewTitle>
-				<StyleLink to={`/post/${categoryId}/${postId}`}>
-					{title}
-				</StyleLink>
-			</PreviewTitle>
-			<PreviewAuther>{author}</PreviewAuther>
-			<PreviewDate>{date}</PreviewDate>
-			<PreviewContent>{content.slice(0,4)}...</PreviewContent>
-			
-		</PreviewBoxStyle>
+		<PostPreviewStyle>
+			{previewList}
+		</PostPreviewStyle>
 	)
 };
 

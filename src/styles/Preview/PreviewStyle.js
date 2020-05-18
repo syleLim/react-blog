@@ -2,41 +2,49 @@ import styles from "styled-components"
 import { NavLink } from "react-router-dom";
 
 const PreviewBoxStyle = styles.div`
-	width				: calc(100% - 3.25rem);
+	width				: calc(100% - 3rem);
 	height				: 15rem;
 	margin				: 1rem;
 	padding-left		: 1rem;
 	float				: left;
-	background-color	: #F0FFFF;
-	border				: 0.1rem dashed grey;
-	border-radius		: 0.7rem;
+	background-color	: #F7F7F7;
 `
 
 const PreviewTitle = styles.h1`
-	font-size	: 2rem;
+	width		: 100%;
 	float		: left;
 	margin		: 0rem;
 	margin-top	: 0.5rem;
+
+	font-size	: 4rem;
 `;
 
 const PreviewAuther = styles.p`
-	text-align			: right;
+	float				: left;
 	padding-right		: 1rem;
-	margin-block-start	: 1.5rem;
+	margin-block-start	: 0rem;
 	margin-block-end	: 0rem;
+
+	font-size			: 1.2rem;
+	color				: #DBA901;
 `
 
 const PreviewDate = styles.p`
-	text-align			: right;
+	float				: left;
 	margin-block-start	: 0rem;
 	margin-block-end	: 0rem;
 	padding-right		: 1rem;
+
+	font-size			: 1.2rem;
+	color				: black;
 `;
 
 const PreviewContent = styles.p`
+	float				: left;
 	margin-block-start	: 0.5rem;
 	padding-left		: 1rem;
-	font-size			: 1rem;
+	
+	font-size			: 1.2rem;
 `;
 
 const StyleLink = styles(NavLink)`

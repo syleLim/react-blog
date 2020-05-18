@@ -3,12 +3,13 @@ import { Route } from "react-router-dom"
 import { AppStyle } from "./styles"
 import { HomePage, PostListPage, PostPage } from "./pages"
 import { CategoryContainer } from "./containers"
-import { Footer } from "./component"
+import { Footer, Header } from "./component"
 
 class App extends React.Component {
     render () {
         return (
             <div>
+                <Header />
                 <AppStyle>
                     <Route exact path="/" component={HomePage}/>
                     <Route exact path="/postlist/:id" component={PostListPage}/>

@@ -2,7 +2,7 @@ export { default as HomeStyle }				from "./Home/HomeStyle"
 export { TitleStyle,
 			BlogDescription,
 			BlogTitle }						from "./Title/TitleStyle"
-export { HomePreviewStyle,	Line }			from "./Home/HomePreviewStyle"
+export { HomePreviewStyle }					from "./Home/HomePreviewStyle"
 export { PreviewBoxStyle,
 			PreviewAuther,
 			PreviewContent,
@@ -22,8 +22,11 @@ export { PostStyle,
 		 PostDate, 
 		 PostContent } 						from "./Post/PostStyle"
 export { default as PostListStyle } 		from "./Post/PostListStyle"
+export { PostPreviewStyle }					from "./Post/PostPreviewStyle"
 
 export { FooterStyle, FooterContent }		from "./Footer/FooterStyle"
+export { HeaderStyle, HeaderContent }		from "./Header/HeaderStyles"
 
 export { default as AppStyle }				from "./AppStyle"
+export { Line }								from "./Basic/BasicStyle"
 
