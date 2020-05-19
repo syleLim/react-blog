@@ -1,11 +1,11 @@
 import React from "react"
 import { Route } from "react-router-dom"
-import { AppStyle } from "./styles"
-import { HomePage, PostListPage, PostPage } from "./pages"
-import { CategoryContainer } from "./containers"
-import { Footer, Header } from "./component"
+import { AppStyle } from "../../styles"
+import { HomePage, PostListPage, PostPage } from "../../pages"
+import { CategoryContainer } from "../../containers"
+import { Footer, Header } from ".."
 
-class App extends React.Component {
+class AppComponent extends React.Component {
     render () {
         return (
             <div>
@@ -22,5 +22,5 @@ class App extends React.Component {
     };
 }
 
-export default App;
+export default AppComponent;
 

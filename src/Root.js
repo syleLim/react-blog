@@ -4,7 +4,7 @@ import { createStore, applyMiddleware } from "redux"
 import { Provider } from "react-redux"
 import ReduxThunk from "redux-thunk"
 
-import App from "./App"
+import AppContainer from "./containers"
 import modules from "./modules"
 
 const store = createStore(modules, applyMiddleware(ReduxThunk));
@@ -13,7 +13,7 @@ const Root = () => {
     return (
         <Provider store={store}>
             <BrowserRouter>
-                <App />
+                <AppContainer />
             </BrowserRouter>
         </Provider>
     );

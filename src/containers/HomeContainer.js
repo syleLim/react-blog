@@ -17,7 +17,7 @@ class HomeContainter extends React.Component {
 	}
 
 	getPreviewItem (postList, itemId) {
-		
+		previewItem
 	}
 
 	render () {
