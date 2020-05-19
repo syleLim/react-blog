@@ -2,5 +2,82 @@
 	"user"				: "seolim",
 	"userDescription"	: "anything do",
 	"blogTitle"			: "seolim`s blog",
-	"blogDescription"	: "doing anything"
+	"blogDescription"	: "doing anything",
+	"lastPosts"			: [
+		["Group1", "category1", "post1.md"],
+		["Group1", "category2", "post3.md"],
+		["Group2", "category2", "post7.md"]
+	],
+	"POSTS"				: [
+		{
+			"groupName" : "Group1",
+			"categoris" : [
+				{
+					"categoryName"	: "category1",
+					"posts"			: [
+						{
+							"title"		: "post1.md",
+							"author"	: "author1",
+							"date"		: "2020-05-01"
+						},
+						{
+							"title"		: "post2.md",
+							"author"	: "author2",
+							"date"		: "2020-05-02"
+						}
+					]
+				},
+				{
+					"categoryName"	: "category2",
+					"posts"			: [
+						{
+							"title"		: "post3.md",
+							"author"	: "author3",
+							"date"		: "2020-05-03"
+						},
+						{
+							"title"		: "post4.md",
+							"author"	: "author4",
+							"date"		: "2020-05-04"
+						}
+					]
+				}
+			]
+		},
+		{
+			"groupName" : "Group2",
+			"categoris" : [
+				{
+					"categoryName"	: "category1",
+					"posts"			: [
+						{
+							"title"		: "post5.md",
+							"author"	: "author5",
+							"date"		: "2020-05-05"
+						},
+						{
+							"title"		: "post6.md",
+							"author"	: "author6",
+							"date"		: "2020-05-06"
+						}
+					]
+				},
+				{
+					"categoryName"	: "category2",
+					"posts"			: [
+						{
+							"title"		: "post7.md",
+							"author"	: "author7",
+							"date"		: "2020-05-07"
+						},
+						{
+							"title"		: "post8.md",
+							"author"	: "author8",
+							"date"		: "2020-05-08"
+						}
+					]
+				}
+			]
+		}
+	]
 }

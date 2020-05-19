@@ -17,12 +17,7 @@ class HomeContainter extends React.Component {
 	}
 
 	getPreviewItem (postList, itemId) {
-		let preview = [];
-
-		itemId.forEach(id => {
-			preview.push(postList.get(id.categoryId).get(id.postId));
-		})
-		return (List(preview));
+		
 	}
 
 	render () {
@@ -39,7 +34,7 @@ class HomeContainter extends React.Component {
 const mapStateToProps = (state) => ({
 	blogTitle		: state.HomeAction.blogTitle,
 	blogDescription	: state.HomeAction.blogDescription,
-	itemId			: state.HomeAction.itemId,
+	lastPosts		: state.HomeAction.lastPosts,
 	postList		: state.PostAction
 });
 

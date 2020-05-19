@@ -29,16 +29,7 @@ export const getTest = () => dispatch => {
 const initialState = Record({
 	blogTitle		: "TITLE",
 	blogDescription	: "description",
-	itemId			: List([
-		Record({
-			categoryId	: 0,
-			postId		: 0
-		})(),
-		Record({
-			categoryId	: 1,
-			postId		: 0
-		})(),
-	])
+	lastPosts		: List([])
 })()
 
 export default handleActions({
@@ -47,12 +38,11 @@ export default handleActions({
 	},
 
 	[S] : (state, action) => {
-		const { blogTitle,  blogDescription } = action.payload.data
+		const { blogTitle,  blogDescription, lastPosts } = action.payload.data
 
-		state = state.set("blogTitle", blogTitle)
-		state = state.set("blogDescription", blogDescription)
-		console.log(state.blogDescription);
-		return (state);
+		return state.set("blogTitle", blogTitle)
+						.set("blogDescription", blogDescription)
+						.set("lastPosts", List([lastPosts.map()]));
 	}
 }, initialState);
 

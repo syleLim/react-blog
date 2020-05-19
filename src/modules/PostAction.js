@@ -5,46 +5,20 @@ const actionType = "TypeName";
 
 export const createActionFunction = createAction(actionType);
 
-const initialState = List([
-	List([
-		Record({
-			categoryId	: 0,
-			postId		: 0,
-			title		: "title1",
-			author		: "no auther1",
-			date		: "no date1",
-			content		: `# Test MarkDown
-## test header
-### testtest
-\`\`\`
-	code block
-\`\`\`
-- **list1**
-- **list2**
-- \`inline block\`
-<br><br>
-`
-		})(),
-		Record({
-			categoryId	: 0,
-			postId		: 1,
-			title	: "title2",
-			author	: "no auther2",
-			date	: "no date2",
-			content	: `Markdown format content2`
-		})()
-	]),
-	List([
-		Record({
-			categoryId	: 1,
-			postId		: 0,
-			title	: "title3",
-			author	: "no auther3",
-			date	: "no date3",
-			content	: ''
-		})(),
-	])
-]);
+const initialState = Record({
+	Group1 : Record({
+		category1 : Record({
+			"post1.md"	: Record({
+				group		: "no data",
+				category	: "no data",
+				title 		: "no data",
+				author		: "no data",
+				date		: "no data",
+				content		: "no data"
+			})
+		})
+	}),
+});
 
 export default handleActions({
 	
