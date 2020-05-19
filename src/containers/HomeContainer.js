@@ -1,10 +1,21 @@
 import React from "react"
 import { connect } from "react-redux"
 import { List, Record } from "immutable"
+import { bindActionCreators } from "redux"
 
 import { HomeComponent } from "../component"
+import * as HomeAction from "../modules/HomeAction"
 
 class HomeContainter extends React.Component {
+	loadData () {
+		const { HomeAction } = this.props;
+		HomeAction.getTest();
+	}
+
+	componentDidMount () {
+		this.loadData();
+	}
+
 	getPreviewItem (postList, itemId) {
 		let preview = [];
 
@@ -16,7 +27,7 @@ class HomeContainter extends React.Component {
 
 	render () {
 		const {blogTitle, blogDescription, itemId, postList} = this.props;
-		//console.log(postList.get(0).get(0).title)
+		console.log(blogTitle);
 		return (<HomeComponent 
 					blogTitle={blogTitle}
 					blogDescription={blogDescription}
@@ -33,7 +44,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-
+	HomeAction : bindActionCreators(HomeAction, dispatch)
 });
 
 export default HomeContainter = connect(

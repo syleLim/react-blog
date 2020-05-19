@@ -1,5 +1,6 @@
-import { Map, List, Record } from "immutable"
-import { handleActions, createAction } from "redux-actions"
+import { Map, List, Record }			from "immutable"
+import { handleActions, createAction }	from "redux-actions"
+
 const actionType = "TypeName";
 
 export const createActionFunction = createAction(actionType);
@@ -40,7 +41,7 @@ const initialState = List([
 			title	: "title3",
 			author	: "no auther3",
 			date	: "no date3",
-			content	: `Markdown format content3`
+			content	: ''
 		})(),
 	])
 ]);

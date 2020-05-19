@@ -18,6 +18,7 @@ module.exports = {
             },
         ]
     },
+    node : { fs : 'empty'},
     plugins: [
         new HtmlWebpackPlugin({
             template: './src/index.html'

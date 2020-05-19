@@ -1,9 +1,30 @@
 import { List, Record } from "immutable"
 import { handleActions, createAction } from "redux-actions"
 
-const actionType = "TypeName";
 
-export const createActionFunction = createAction(actionType);
+
+import axios from "axios"
+const getHomeDataAPI = () => {
+	return axios.get("../../DB/information.json")
+}
+const P = "P"
+const S = "S"
+const F = "F"
+export const p = createAction(P);
+export const s = createAction(S);
+export const f = createAction(F);
+
+export const getTest = () => dispatch => {
+	dispatch(p())
+
+	return getHomeDataAPI().then(res => {
+		dispatch(s(res));
+		return res;
+	}).catch(err => {
+		dispatch(f(err));
+		throw(err);
+	})
+}
 
 const initialState = Record({
 	blogTitle		: "TITLE",
@@ -21,7 +42,18 @@ const initialState = Record({
 })()
 
 export default handleActions({
-	
+	[P] : (state, action) => {
+		return state
+	},
+
+	[S] : (state, action) => {
+		const { blogTitle,  blogDescription } = action.payload.data
+
+		state = state.set("blogTitle", blogTitle)
+		state = state.set("blogDescription", blogDescription)
+		console.log(state.blogDescription);
+		return (state);
+	}
 }, initialState);
 
 /*

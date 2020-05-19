@@ -1,13 +1,13 @@
 import React from "react"
 import { BrowserRouter } from "react-router-dom"
-import { createStore } from "redux"
+import { createStore, applyMiddleware } from "redux"
 import { Provider } from "react-redux"
+import ReduxThunk from "redux-thunk"
 
 import App from "./App"
 import modules from "./modules"
-import { GlobalStyles } from "./styles"
 
-const store = createStore(modules)
+const store = createStore(modules, applyMiddleware(ReduxThunk));
 
 const Root = () => {
     return (
