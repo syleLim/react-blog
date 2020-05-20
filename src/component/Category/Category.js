@@ -7,49 +7,43 @@ import { CategoryStyle } from "../../styles"
 import Profile from "./Profile"
 import CategoryList from "./CategoryList"
 
-const CategoryComponent = ({profile, categoryGroup}) => {
-    return (
-        <CategoryStyle>
-            <Profile profile={ profile } />
-            <CategoryList categoryGroup={categoryGroup} />
-        </CategoryStyle>
-    );
+const CategoryComponent = ({profile, categoryGroups}) => {
+	return (
+		<CategoryStyle>
+			<Profile profile={ profile } />
+			<CategoryList categoryGroups={categoryGroups} />
+		</CategoryStyle>
+	);
 };
 
 CategoryComponent.propTypes = {
-    profile         : ImmutablePropTypes.recordOf({
-        name        : PropTypes.string,
-        description : PropTypes.string
-    }),
-    categoryGroup   : ImmutablePropTypes.listOf(
-        ImmutablePropTypes.recordOf({
-            groupName   : PropTypes.string,
-            categories  : ImmutablePropTypes.listOf(
-                ImmutablePropTypes.recordOf({
-                    categoyId       : PropTypes.number,
-                    categoryName    : PropTypes.string
-                })
-            )
-        })
-    )
+	profile         : ImmutablePropTypes.recordOf({
+		name        : PropTypes.string,
+		description : PropTypes.string
+	}),
+	categoryGroups	: ImmutablePropTypes.listOf(
+		ImmutablePropTypes.recordOf({
+			groupName   : PropTypes.string,
+			categories  : ImmutablePropTypes.listOf(
+				PropTypes.string
+			)
+		})
+	)
 };
 
 CategoryComponent.defaultProps = {
-    profile	: Record({
-        name		: "no data",
-        description	: "no data"
-    })(),
-    categoryGroup : List([
-        Record({
-            groupName	: "no data",
-            categories	: List([
-                Record({
-                    categoryId		: 0,
-                    categoryName	: "no date"
-                })()
-            ])
-        })()  
-    ])
+	profile	: Record({
+		name		: "xx",
+		description	: "xx"
+	})(),
+	categoryGroups	: List([
+		Record({
+			groupName	: "xx",
+			categories	: List([
+				"xx"
+			])
+		})()  
+	])
 };
 
 export default CategoryComponent;

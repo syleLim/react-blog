@@ -48,19 +48,6 @@ const previewCodeBlock = (props) => {
 	);
 }
 
-const previewText = (props) => {
-	return (
-		<p style={{
-			fontSize	: "0.8rem",
-			margin		: 0,
-			padding		: 0,
-			color		: "gray"
-		}}>
-			{props.value}
-		</p>
-	)
-}
-
 const previewHeader = (props) => {
 	return (
 		<p style={{
@@ -74,4 +61,4 @@ const previewHeader = (props) => {
 	)
 }
 
-export { inlineCodeBlock, codeBlock, previewText, previewCodeBlock, previewInlineCodeBlock, previewHeader};
+export { inlineCodeBlock, codeBlock, previewCodeBlock, previewInlineCodeBlock, previewHeader};

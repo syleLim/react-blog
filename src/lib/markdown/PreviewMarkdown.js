@@ -1,8 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import ReactMarkDown from "react-markdown"
-import { previewText,
-		 previewCodeBlock,
+import { previewCodeBlock,
 		 previewInlineCodeBlock,
 		 previewHeader } from "./MarkDownStyle"
 
@@ -12,7 +11,6 @@ const PreviewMarkDown = ({content}) => {
 							skipHtml={false}
 							escapeHtml={false}
 							renderers={{
-								text		: previewText,
 								heading		: previewHeader,
 								code		: previewCodeBlock,
 								inlineCode	: previewInlineCodeBlock

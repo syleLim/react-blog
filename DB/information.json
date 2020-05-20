@@ -11,7 +11,7 @@
 	"POSTS"				: [
 		{
 			"groupName" : "Group1",
-			"categoris" : [
+			"categories" : [
 				{
 					"categoryName"	: "category1",
 					"posts"			: [
@@ -46,7 +46,7 @@
 		},
 		{
 			"groupName" : "Group2",
-			"categoris" : [
+			"categories" : [
 				{
 					"categoryName"	: "category1",
 					"posts"			: [

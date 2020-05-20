@@ -13,10 +13,10 @@ import { PreviewBoxStyle,
 			StyleLink }	from "../../styles"
 
 const HomePreview = ({previewItems}) => {
-	const previewList = previewItems.map(item => {
+	const previewList = previewItems.map((item, i) => {
 		const { categoryId, postId, title,  author, date, content } = item
 		return (
-			<div>
+			<div key={i}>
 				<Line/>
 				<PreviewBoxStyle>
 					<PreviewAuther>{author}</PreviewAuther>

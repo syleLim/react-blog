@@ -1,23 +1,12 @@
-import { Map, List, Record }			from "immutable"
+import { Map, List }			from "immutable"
 import { handleActions, createAction }	from "redux-actions"
 
 const actionType = "TypeName";
 
 export const createActionFunction = createAction(actionType);
 
-const initialState = Record({
-	Group1 : Record({
-		category1 : Record({
-			"post1.md"	: Record({
-				group		: "no data",
-				category	: "no data",
-				title 		: "no data",
-				author		: "no data",
-				date		: "no data",
-				content		: "no data"
-			})
-		})
-	}),
+const initialState = Map({
+	
 });
 
 export default handleActions({
@@ -26,16 +15,17 @@ export default handleActions({
 
 /*
 	initial state of Post structure
-	List [
-		catergoryId : List [
-			PostId : Record {
-				categoryId
-				postId
-				title
-				author
-				date
-				content
-			}
-		]
-	]
+	POSTS : Map({
+		groupName : Map({
+			categorName : Map({
+				postName : Record({
+					categoryName
+					title
+					author
+					date
+					content
+				})
+			})
+		})
+	})
 */

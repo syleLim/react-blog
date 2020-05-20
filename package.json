@@ -40,6 +40,7 @@
     "read-markdown": "^1.0.2",
     "redux": "^4.0.5",
     "redux-actions": "^2.6.5",
+    "redux-pender": "^2.0.12",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.1.0",
     "webpack": "^4.43.0",

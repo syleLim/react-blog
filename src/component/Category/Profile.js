@@ -3,12 +3,12 @@ import { ProfileStyle, User, Description } from "../../styles"
 import { Record } from "immutable"
 
 const Profile = ({profile}) => {
-	const { name, description } = profile;
+	const { user, userDescription } = profile;
 
 	return (
 		<ProfileStyle>
-			<User>{name}</User>
-			<Description>{description}</Description>
+			<User>{user}</User>
+			<Description>{userDescription}</Description>
 		</ProfileStyle>
 	);
 }

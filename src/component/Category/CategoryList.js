@@ -6,27 +6,32 @@ import { CategoryListStyle,
 			Item,
 			GroupName,
 			CategroyLink } from "../../styles"
-import { NavLink } from "react-router-dom" 
+//import { NavLink } from "react-router-dom" 
 
-const Category = ({categoies}) => (
+const Category = ({groupName, categories}) => {
+	
+	return(
 	<CategoryGroupStyle>
-		{categoies.map(({ categoryId, categoryName }) => (
-			<Item>
-				<CategroyLink exact to={`/postlist/${categoryId}`}>
+		{categories.map((categoryName, i) => (
+			<Item key={i}>
+				<CategroyLink exact to={`/postlist/${groupName}/${categoryName}`}>
 					{categoryName}
 				</CategroyLink>
 			</Item>
 		))}
 	</CategoryGroupStyle>
-)
+)}
 
-const CategoryList = ({categoryGroup}) => (
-	categoryGroup.map(({ groupName, categories }) => (
-			<CategoryListStyle>
+const CategoryList = ({categoryGroups}) => (
+	categoryGroups.map(({ groupName, categories }, i) => {
+	
+		return(
+			<CategoryListStyle key={i}>
 				<GroupName>{groupName}</GroupName>
-				<Category categoies={categories}/>
+				<Category groupName={groupName}
+						 categories={categories}/>
 			</CategoryListStyle>
-		)
+		)}
 	)
 )
 
