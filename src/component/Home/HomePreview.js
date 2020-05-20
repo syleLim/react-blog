@@ -12,9 +12,15 @@ import { PreviewBoxStyle,
 			PreviewTitle,
 			StyleLink }	from "../../styles"
 
-const HomePreview = ({previewItems}) => {
-	const previewList = previewItems.map((item, i) => {
-		const { categoryId, postId, title,  author, date, content } = item
+const HomePreview = ({lastPosts}) => {
+	const previewList = lastPosts.map((post, i) => {
+		const { groupName,
+				categoryName,
+				title, 
+				author,
+				date,
+				preview } = post.toJS();
+
 		return (
 			<div key={i}>
 				<Line/>
@@ -22,12 +28,12 @@ const HomePreview = ({previewItems}) => {
 					<PreviewAuther>{author}</PreviewAuther>
 					<PreviewDate>/ {date}</PreviewDate>
 					<PreviewTitle>
-						<StyleLink to={`/post/${categoryId}/${postId}`}>
-							{title}
+						<StyleLink to={`/post/${groupName}/${categoryName}/${title}`}>
+							{title.slice(0, -3)}
 						</StyleLink>
 					</PreviewTitle>
 					<PreviewContent>
-						<PreviewMarkDown content={content} />
+						<PreviewMarkDown content={preview} />
 					</PreviewContent>
 				</PreviewBoxStyle>
 			</div>

@@ -1,13 +1,14 @@
-import React from "react"
-import PropTypes			from "prop-types"
-import ImmutablePropTypes	from "react-immutable-proptypes"
-import { List, Record }		from "immutable"
-import { HomeStyle }		from "../../styles"
-import Title 				from "../Title/Title"
-import HomePreview			from "./HomePreview"
+import React 					from "react"
+import PropTypes				from "prop-types"
+import ImmutablePropTypes		from "react-immutable-proptypes"
+import { List, Record, Map }	from "immutable"
+
+import { HomeStyle }			from "../../styles"
+import Title 					from "../Title/Title"
+import HomePreview				from "./HomePreview"
 
 
-const HomeComponent = ({blogTitle, blogDescription, previewItems}) => {
+const HomeComponent = ({blogTitle, blogDescription, lastPosts}) => {
 	return (
 		<HomeStyle>
 			<Title
@@ -15,7 +16,7 @@ const HomeComponent = ({blogTitle, blogDescription, previewItems}) => {
 				blogDescription={blogDescription}
 				/>
 			<HomePreview 
-				previewItems={previewItems}
+				lastPosts={lastPosts}
 				/>
 		</HomeStyle>
 	)
@@ -24,26 +25,30 @@ const HomeComponent = ({blogTitle, blogDescription, previewItems}) => {
 HomeComponent.propTypes = {
 	blogTitle		: PropTypes.string,
 	blogDescription	: PropTypes.string,
-	previewItems	: ImmutablePropTypes.listOf(
-		ImmutablePropTypes.recordOf({
-			title		: PropTypes.string,
-			author		: PropTypes.string,
-			date		: PropTypes.string,
-			content		: PropTypes.string
+	lastPosts		: ImmutablePropTypes.listOf(
+		ImmutablePropTypes.mapOf({
+			groupName		: PropTypes.string,
+			categoryName	: PropTypes.string,
+			title			: PropTypes.string,
+			author			: PropTypes.string,
+			date			: PropTypes.string,
+			preview			: PropTypes.string
 		})
 	)
 };
 
 HomeComponent.defaultProps = {
-	blogTitle		: "no title",
-	blogDescription	: "no description",
+	blogTitle		: "xx",
+	blogDescription	: "xx",
 	previewItems	: List([
-		Record({
-			titile	: "no item",
-			author	: "no author",
-			date	: "no date",
-			content	: "no content"
-		})()
+		Map({
+			groupName		: "xxx",
+			categoryName	: "xxx",
+			titile			: "xxx",
+			author			: "xxx",
+			date			: "xxx",
+			preview			: "xxx"
+		})
 	])
 };
 

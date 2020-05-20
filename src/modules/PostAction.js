@@ -12,20 +12,3 @@ const initialState = Map({
 export default handleActions({
 	
 }, initialState);
-
-/*
-	initial state of Post structure
-	POSTS : Map({
-		groupName : Map({
-			categorName : Map({
-				postName : Record({
-					categoryName
-					title
-					author
-					date
-					content
-				})
-			})
-		})
-	})
-*/

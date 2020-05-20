@@ -16,7 +16,7 @@ const initialState = Map({
 	blogTitle		: "no data",
 	blogDescription	: "no data",
 	lastPosts		: List([
-		List([])
+		List(["no data", "no data", "no data"])
 	]),
 	POSTS			: List([
 		Map({
@@ -26,9 +26,12 @@ const initialState = Map({
 					categoryName	: "no data",
 					posts			: List([
 						Map({
-							title	: "no data",
-							author	: "no data",
-							date 	: "no data"
+							groupName 		: "no data",
+							categoryName	: "no data",
+							title			: "no data",
+							author			: "no data",
+							date 			: "no data",
+							preview			: "no date"
 						})
 					])
 				})

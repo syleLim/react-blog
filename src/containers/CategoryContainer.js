@@ -7,20 +7,6 @@ import { CategoryComponent }	from "../component"
 import * as CategoryAction		from "../modules/CategoryAction"
 
 class CategoryContainter extends React.Component {
-	loadData() {
-		const { POSTS, CategoryAction } = this.props;
-		
-		CategoryAction.getCategory(POSTS);
-	}
-	
-	componentDidMount() {
-		console.log("category mount")
-		this.loadData()	
-	}
-	
-	componentDidUpdate(prevProps, prevState) {
-		console.log(prevProps.toString(), this.props.toString())
-	}
 
 	render () {
 		const { user, userDescription, categoryGroups } = this.props
@@ -40,7 +26,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-	CategoryAction	: bindActionCreators(CategoryAction, dispatch)
+	
 });
 
 export default CategoryContainter = connect(

@@ -16,14 +16,20 @@
 					"categoryName"	: "category1",
 					"posts"			: [
 						{
-							"title"		: "post1.md",
-							"author"	: "author1",
-							"date"		: "2020-05-01"
+							"groupName" 	: "Group1",
+							"categoryName"	: "category1",
+							"title"			: "post1.md",
+							"author"		: "author1",
+							"date"			: "2020-05-01",
+							"preview"		: "preview1"
 						},
 						{
-							"title"		: "post2.md",
-							"author"	: "author2",
-							"date"		: "2020-05-02"
+							"groupName" 	: "Group1",
+							"categoryName"	: "category1",
+							"title"			: "post2.md",
+							"author"		: "author2",
+							"date"			: "2020-05-02",
+							"preview"		: "preview2"
 						}
 					]
 				},
@@ -31,14 +37,20 @@
 					"categoryName"	: "category2",
 					"posts"			: [
 						{
-							"title"		: "post3.md",
-							"author"	: "author3",
-							"date"		: "2020-05-03"
+							"groupName" 	: "Group1",
+							"categoryName"	: "category2",
+							"title"			: "post3.md",
+							"author"		: "author3",
+							"date"			: "2020-05-03",
+							"preview"		: "preview3"
 						},
 						{
-							"title"		: "post4.md",
-							"author"	: "author4",
-							"date"		: "2020-05-04"
+							"groupName" 	: "Group1",
+							"categoryName"	: "category2",
+							"title"			: "post4.md",
+							"author"		: "author4",
+							"date"			: "2020-05-04",
+							"preview"		: "preview4"
 						}
 					]
 				}
@@ -51,14 +63,20 @@
 					"categoryName"	: "category1",
 					"posts"			: [
 						{
-							"title"		: "post5.md",
-							"author"	: "author5",
-							"date"		: "2020-05-05"
+							"groupName" 	: "Group2",
+							"categoryName"	: "category1",
+							"title"			: "post5.md",
+							"author"		: "author5",
+							"date"			: "2020-05-05",
+							"preview"		: "preview5"
 						},
 						{
-							"title"		: "post6.md",
-							"author"	: "author6",
-							"date"		: "2020-05-06"
+							"groupName" 	: "Group2",
+							"categoryName"	: "category1",
+							"title"			: "post6.md",
+							"author"		: "author6",
+							"date"			: "2020-05-06",
+							"preview"		: "preview6"
 						}
 					]
 				},
@@ -66,14 +84,20 @@
 					"categoryName"	: "category2",
 					"posts"			: [
 						{
-							"title"		: "post7.md",
-							"author"	: "author7",
-							"date"		: "2020-05-07"
+							"groupName" 	: "Group2",
+							"categoryName"	: "category2",
+							"title"			: "post7.md",
+							"author"		: "author7",
+							"date"			: "2020-05-07",
+							"preview"		: "preview1"
 						},
-						{
-							"title"		: "post8.md",
-							"author"	: "author8",
-							"date"		: "2020-05-08"
+						{	
+							"groupName" 	: "Group2",
+							"categoryName"	: "category1",
+							"title"			: "post8.md",
+							"author"		: "author8",
+							"date"			: "2020-05-08",
+							"preview"		: "preview1"
 						}
 					]
 				}

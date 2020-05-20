@@ -5,7 +5,8 @@ import { Route } from "react-router-dom"
 const PostListPage = ({match}) => {
     return (
         <PostListContainer
-            id={Number(match.params.id)}
+            groupName={match.params.groupName}
+            categoryName={match.params.categoryName}
         />
     );
 }

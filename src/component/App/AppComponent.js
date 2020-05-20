@@ -12,8 +12,8 @@ class AppComponent extends React.Component {
                 <Header />
                 <AppStyle>
                     <Route exact path="/" component={HomePage}/>
-                    <Route exact path="/postlist/:id" component={PostListPage}/>
-                    <Route path="/post/:categoryId/:postId" component={PostPage}/>
+                    <Route exact path="/postlist/:groupName/:categoryName" component={PostListPage}/>
+                    <Route path="/post/:groupName/:categoryName/:postName" component={PostPage}/>
                     <CategoryContainer />
                 </AppStyle>
                 <Footer />

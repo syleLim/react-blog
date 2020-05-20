@@ -12,12 +12,12 @@ class HomeContainter extends React.Component {
 	}
 
 	render () {
-		const {blogTitle, blogDescription, itemId, postList} = this.props;
+		const {blogTitle, blogDescription, lastPosts } = this.props;
 
 		return (<HomeComponent 
 					blogTitle={blogTitle}
 					blogDescription={blogDescription}
-					previewItems={this.getPreviewItem(postList, itemId)}
+					lastPosts={lastPosts}
 				/>)
 	}
 }
@@ -25,6 +25,13 @@ class HomeContainter extends React.Component {
 const mapStateToProps = (state) => ({
 	blogTitle		: state.DataAction.get("blogTitle"),
 	blogDescription	: state.DataAction.get("blogDescription"),
+	lastPosts		: state.DataAction.get("lastPosts").map(path => (state.DataAction.get("POSTS")
+						.filter(group => group.get("groupName") === path.get(0))
+						.get(0).get("categories")
+						.filter(category => category.get("categoryName") === path.get(1))
+						.get(0).get("posts")
+						.filter(post => post.get("title") === path.get(2)).get(0)
+					))
 });
 
 const mapDispatchToProps = (dispatch) => ({
