@@ -1,14 +1,33 @@
-import { Map, List }			from "immutable"
+import { Map, List, Record }			from "immutable"
 import { handleActions, createAction }	from "redux-actions"
+import { pender }						from "redux-pender"
+import axios							from "axios"
 
-const actionType = "TypeName";
+const getPostAPI = (groupName, categoryName, postName) => {
+	return axios.get(`../../../DB/POSTS/${groupName}/${categoryName}/${postName}`)
+}
 
-export const createActionFunction = createAction(actionType);
+const GET_POST = "GET_POST";
 
-const initialState = Map({
-	
-});
+export const getPost = createAction(GET_POST, getPostAPI);
+
+const initialState = Record({
+	content			: "no data"
+})();
 
 export default handleActions({
-	
+	...pender({
+		type	: GET_POST,
+
+		onSuccess : (state, action) => {
+			const content = action.payload.data;
+
+			return state.set("content", content);
+		},
+
+		onFailure : (state, action) => {
+			console.log(action)
+			return state;
+		}
+	})
 }, initialState);

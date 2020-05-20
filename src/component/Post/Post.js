@@ -1,7 +1,7 @@
-import React				from "react"
-import PropTypes			from "prop-types"
-import ImmutablePropTyps	from "react-immutable-proptypes"
-import { List, Record }		from "immutable"
+import React					from "react"
+import PropTypes				from "prop-types"
+import ImmutablePropTyps		from "react-immutable-proptypes"
+import { List, Record, Map }	from "immutable"
 
 import { PostStyle,
 			PostTitle, 
@@ -12,8 +12,8 @@ import { PostStyle,
 import { PostMarkDown }	from "../../lib"
 
 
-const PostCompoenet = ({post}) => {
-	const { title, author, date, content } = post;
+const PostCompoenet = ({info, content}) => {
+	const { title, author, date } = info.toJS();
 	return (
 		<PostStyle>
 			<PostTitle>{title}</PostTitle>

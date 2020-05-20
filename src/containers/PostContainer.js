@@ -1,24 +1,54 @@
 import React from "react"
 import { connect } from "react-redux"
+import { bindActionCreators } from "redux"
 
 import { PostComponent } from "../component"
+import * as PostAction from "../modules/PostAction"
 
 class PostContainer extends React.Component {
+	loadData () {
+		const { PostAction,
+				groupName,
+				categoryName,
+				postName } = this.props;
+		PostAction.getPost(groupName, categoryName, postName);
+	}
+
+	componentDidMount () {
+		this.loadData();
+	}
+
+	getInfo () {
+		const { groupName,
+				categoryName,
+				postName,
+				POSTS } = this.props;
+		
+		return POSTS.filter(group => group.get("groupName") === groupName)
+				.get(0).get("categories")
+				.filter(category => category.get("categoryName") === categoryName)
+				.get(0).get("posts")
+				.filter(post => post.get("title") === postName)
+				.get(0)
+	}
+
 	render () {
-		const { categoryId, postId, postList } = this.props;
+		const { content } = this.props;
 		
 		return (<PostComponent
-					post={postList.get(categoryId).get(postId)}
+					info={this.getInfo()}
+					content={content}
 				/>)
 	}
 }
 
 const mapStateToProps = (state) => ({
-	postList	: state.PostAction
+	POSTS	: state.DataAction.get("POSTS"),
+	content	: state.PostAction.get("content")
 });
 
 const mapDispatchToProps = (dispatch) => ({
-
+	PostAction	: bindActionCreators(PostAction, dispatch)
 });
 
 export default PostContainer = connect(

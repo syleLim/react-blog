@@ -4,8 +4,9 @@ import { PostContainer } from "../containers"
 const PostPage = ({match}) => {
     return (
         <PostContainer
-            categoryId={Number(match.params.categoryId)}
-            postId={Number(match.params.postId)}
+            groupName={(match.params.groupName)}
+            categoryName={(match.params.categoryName)}
+            postName={(match.params.postName)}
         />
     );
 }
