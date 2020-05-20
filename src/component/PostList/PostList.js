@@ -15,7 +15,7 @@ const PostListComponent = ({blogTitle, blogDescription, postList}) => {
 				blogTitle={blogTitle}
 				blogDescription={blogDescription}/>
 			<PostPreview 
-				previewItems={postList} />
+				postList={postList} />
 		</PostListStyle>
 	)
 }

@@ -1,5 +1,6 @@
-import React from "react"
-import { NavLink } from "react-router-dom";
+import React 		from "react"
+import { Map } 		from "immutable"
+import { NavLink }	from "react-router-dom";
 
 import { PostPreviewStyle,
 			PreviewBoxStyle,
@@ -10,21 +11,23 @@ import { PostPreviewStyle,
 			StyleLink,
 			Line }	from "../../styles"
 
-const PostPreview = ({previewItems}) => {
-	const previewList = previewItems.map(item => {
-		const { categoryId, postId, title, author, date, content} = item;
+const PostPreview = ({postList}) => {
+	
+	const previewList = postList.map((post, i) => {
+	
+		const { groupName, categoryName, title, author, date, preview } = post.toJS();
 		return (
-			<div>
+			<div key={i}>
 				<Line />
 				<PreviewBoxStyle>
 					<PreviewAuther>{author}</PreviewAuther>
 					<PreviewDate> / {date}</PreviewDate>
 					<PreviewTitle>
-						<StyleLink to={`/post/${categoryId}/${postId}`}>
-							{title}
+						<StyleLink to={`/post/${groupName}/${categoryName}/${title}`}>
+							{title.slice(0, -3)}
 						</StyleLink>
 					</PreviewTitle>
-					<PreviewContent>{content.slice(0,4)}...</PreviewContent>				
+					<PreviewContent>{preview}...</PreviewContent>				
 				</PreviewBoxStyle>
 			</div>
 		)
