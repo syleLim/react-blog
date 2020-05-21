@@ -2,7 +2,7 @@ import styles from "styled-components"
 
 const HomeStyle = styles.div`
 	width				: calc(100% - 15rem);
-	height				: 100%;
+	min-height			: 50rem;
 	float				: left;
 	background-color	: #F7F7F7;
 

@@ -1,4 +1,12 @@
-import React                    from "react"
+npm install --save-dev redux react-redux
+npm install --save-dev redux-actions immutable
+npm install --save-dev redux-pender
+
+cd src
+mkdir lib
+mkdir modules
+
+echo 'import React                    from "react"
 import { BrowserRouter }        from "react-router-dom"
 import { createStore,
 			applyMiddleware,
@@ -23,5 +31,6 @@ const Root = () => {
 	);
 }
 
-export default Root;
+export default Root;' >> reduxRoot.js
 
+cd ..

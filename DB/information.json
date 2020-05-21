@@ -4,101 +4,33 @@
 	"blogTitle"			: "seolim`s blog",
 	"blogDescription"	: "doing anything",
 	"lastPosts"			: [
-		["Group1", "category1", "post1.md"],
-		["Group1", "category2", "post3.md"],
-		["Group2", "category2", "post7.md"]
+
 	],
 	"POSTS"				: [
 		{
-			"groupName" : "Group1",
+			"groupName" : "42Project",
 			"categories" : [
 				{
-					"categoryName"	: "category1",
+					"categoryName"	: "miniShell",
 					"posts"			: [
-						{
-							"groupName" 	: "Group1",
-							"categoryName"	: "category1",
-							"title"			: "post1.md",
-							"author"		: "author1",
-							"date"			: "2020-05-01",
-							"preview"		: "preview1"
-						},
-						{
-							"groupName" 	: "Group1",
-							"categoryName"	: "category1",
-							"title"			: "post2.md",
-							"author"		: "author2",
-							"date"			: "2020-05-02",
-							"preview"		: "preview2"
-						}
-					]
-				},
-				{
-					"categoryName"	: "category2",
-					"posts"			: [
-						{
-							"groupName" 	: "Group1",
-							"categoryName"	: "category2",
-							"title"			: "post3.md",
-							"author"		: "author3",
-							"date"			: "2020-05-03",
-							"preview"		: "preview3"
-						},
-						{
-							"groupName" 	: "Group1",
-							"categoryName"	: "category2",
-							"title"			: "post4.md",
-							"author"		: "author4",
-							"date"			: "2020-05-04",
-							"preview"		: "preview4"
-						}
+						
 					]
 				}
 			]
 		},
 		{
-			"groupName" : "Group2",
+			"groupName" : "React",
 			"categories" : [
 				{
-					"categoryName"	: "category1",
+					"categoryName"	: "Acknownledge",
 					"posts"			: [
-						{
-							"groupName" 	: "Group2",
-							"categoryName"	: "category1",
-							"title"			: "post5.md",
-							"author"		: "author5",
-							"date"			: "2020-05-05",
-							"preview"		: "preview5"
-						},
-						{
-							"groupName" 	: "Group2",
-							"categoryName"	: "category1",
-							"title"			: "post6.md",
-							"author"		: "author6",
-							"date"			: "2020-05-06",
-							"preview"		: "preview6"
-						}
+						
 					]
 				},
 				{
-					"categoryName"	: "category2",
+					"categoryName"	: "Blog Project",
 					"posts"			: [
-						{
-							"groupName" 	: "Group2",
-							"categoryName"	: "category2",
-							"title"			: "post7.md",
-							"author"		: "author7",
-							"date"			: "2020-05-07",
-							"preview"		: "preview1"
-						},
-						{	
-							"groupName" 	: "Group2",
-							"categoryName"	: "category1",
-							"title"			: "post8.md",
-							"author"		: "author8",
-							"date"			: "2020-05-08",
-							"preview"		: "preview1"
-						}
+						
 					]
 				}
 			]

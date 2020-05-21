@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { List, Record } from "immutable"
+import { List, Record, Map } from "immutable"
 import { bindActionCreators } from "redux"
 
 import { HomeComponent } from "../component"
@@ -20,6 +20,10 @@ class HomeContainter extends React.Component {
 					lastPosts={lastPosts}
 				/>)
 	}
+}
+
+const getLastPost = (lastPosts) => {
+	lastPosts.toJs()
 }
 
 const mapStateToProps = (state) => ({
