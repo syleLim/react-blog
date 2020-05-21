@@ -1,115 +1,171 @@
 ### React Blog Project
 # Start Project
+[https://github.com/syleLim/react-blog](https://github.com/syleLim/react-blog)<br><br>
 
-## Object
-**React를 활용한 blog만들기**<br><br>
+## 주의사항
+ 해당 프로젝트는 nodejs가 일정 버전이상 설치되어 있다고 가정되어 진행됩니다.
+ 만약 해당 프로젝트가 정상작동이 되지 않는다면 12.0이상의 nodejs를 설치 후 진행바랍니다.
 
-## What you need?
+## 목표
+#### React를 활용한 blog만들기<br><br>
+
+## 필요한 지식
 1. React
 2. Redux
 3. Router
 4. Styled commponent<br><br>
 
-## What are composed of?
-1. Show Post
-2. Upload Post
-3. Update Category
-4. Etc...<br><br>
+## 어떤 기능이 있을까?
+1. 포스트 보여주기
+2. 포스트 업로드하기
+3. 카테고리 업데이트하기
+4. 기타...<br><br>
 
 ## Start Project
- - ### First Step
-     - **Projcet directory** 구성하기
-```
-react-blog
-    ├── .babelrc
-    ├── .gitignore
-    ├── package.json
-    ├── webpack.config.js
-    ├── webpack.config.js
-    |   ├── begin-with-the-crazy-    ideas.textile
-    |   └── on-simplicity-in-    technology.markdown
-├── _includes
-|   ├── footer.html
-|   └── header.html
-├── _layouts
-|   ├── default.html
-|   └── post.html
-├── _posts
-|   ├── 2007-10-29-why-every-programmer-should-play-nethack.textile
-|   └── 2009-04-26-barcamp-boston-4-roundup.textile
-├── _data
-|   └── members.yml
-├── _site
-└── index.html
-```
+ - ### Project Directory 구성하기 
+    - **src** : 모든 페이지 구성 소스가 담긴 디렉토리
+    - **DB** : 블로그 정보와 post가 담긴 디렉토리
+    - **etc** : react 정보 파일들
+    - [**정보 파일들**]()
+    <p></p>
+    
+    
+  ```=
+  react-blog
+      ├── node_modules
+      ├── src
+      |   ├── index.html
+      |   ├── index.js
+      |   ├── Root.js
+      |   ├── component
+      |   ├── container
+      |   ├── page
+      |   ├── module
+      |   ├── lib
+      |   └── styles
+      ├── DB
+      |   ├── POSTS
+      |   └── information.json
+      ├── .babelrc
+      ├── .gitignore
+      ├── package.json
+      └── webpack.config.js
+  ``` 
+---
+- ### Module 설치
+     - [**npm 이란?**](https://uploadLater)
+     
+  ```
+  //react 관련 모듈
+  npm install --save-dev react react-dom
+  //webpack 관련 모듈
+  npm install --save-dev webpack webpack-dev-server webpack-cli html-webpack-plugin
+  //babel 관련 모듈
+  npm install --save-dev @babel/core babel-loader @babel/preset-react @babel/preset-env
+  ```
+---
+- ### 최초 기본 파일 생성
+    #### Webpack.config.js [**(webpack 이란?)**]()
 
+    ```javascript=
+    const path = require('path')  
+    const HtmlWebpackPlugin = require('html-webpack-plugin')
+
+    module.exports = {
+        entry: './src/index.js',
+        output: {                                          
+            path: path.join(__dirname, '/dist'),
+            filename: 'index_bundle.js'
+        },
+        module: {            
+            rules: [
+                {
+                    test: /\.js$/,
+                    exclude: /node_modules/,
+                    use:{
+                        loader: 'babel-loader'
+                    }
+                },
+            ]
+        },
+        plugins: [
+            new HtmlWebpackPlugin({
+                template: './src/index.html'
+            })
+        ]
+    }
+    ```
+    
+    #### babelrc [(balbel 이란?)]()
+    ```json=
+    {
+        "presets": [
+            "@babel/env",
+            "@babel/react"
+        ]
+    }
+    ```
+
+    #### index.html
+    ```html=
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>My React App</title>
+    </head>
+    <body>
+        <div id="app"></div>				
+    </body>
+    </html>
+    ```
+
+    #### index.js
+    ```javascript=
+    import React from 'react';
+    import ReactDOM from 'react-dom';
+    import App from './component/App' //최초의 component 파일 경로
+
+    ReactDOM.render(<App/>, document.getElementById('app'))
+    ```
 ---
 
-```gherkin=
-Feature: Guess the word
+- ### 최초 component 생성
+    #### component/App.js
+    ```javascript=
+    import React from 'react'
 
-  # The first example has two steps
-  Scenario: Maker starts a game
-    When the Maker starts a game
-    Then the Maker waits for a Breaker to join
+    class App extends React.Component {    
+        render () {
+            return (
+                <div>
+                    MAIN
+                </div>
+            )
+        };
+    }
 
-  # The second example has three steps
-  Scenario: Breaker joins a game
-    Given the Maker has started a game with the word "silky"
-    When the Breaker joins the Maker's game
-    Then the Breaker must guess a word with 5 characters
-```
-> I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it. [name=Bill Gates]
-
-
-```gherkin=
-Feature: Shopping Cart
-  As a Shopper
-  I want to put items in my shopping cart
-  Because I want to manage items before I check out
-
-  Scenario: User adds item to cart
-    Given I'm a logged-in User
-    When I go to the Item page
-    And I click "Add item to cart"
-    Then the quantity of items in my cart should go up
-    And my subtotal should increment
-    And the warehouse inventory should decrement
-```
-
-> Read more about Gherkin here: https://docs.cucumber.io/gherkin/reference/
-
-User flows
+    export default App
+    ```
 ---
-```sequence
-Alice->Bob: Hello Bob, how are you?
-Note right of Bob: Bob thinks
-Bob-->Alice: I am good thanks!
-Note left of Alice: Alice responds
-Alice->Bob: Where have you been?
-```
-
-> Read more about sequence-diagrams here: http://bramp.github.io/js-sequence-diagrams/
-
-Project Timeline
+- #### build 명령어 설정
+    - package.json의 스크립트를 아래와 같이 수정 [(Why?)]()
+  #### package.json
+  ```json=
+  ...
+  "scripts": {
+      "start": "webpack-dev-server --mode development --open --hot",
+      "build": "webpack --mode production"
+  },
+  ...
+  ```
 ---
-```mermaid
-    title A Gantt Diagram
+ - #### 실행
+     ```=
+     npm start
+     ```
 
-    section Section
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
-    section Another
-    Task in sec      :2014-01-12  , 12d
-    anther task      : 24d
-```
-
-> Read more about mermaid here: http://mermaid-js.github.io/mermaid/
-
-## Appendix and FAQ
-
-:::info
-**Find this document incomplete?** Leave a comment!
-:::
-
-###### tags: `Templates` `Documentation`
+## 결과물
+![an image](/DB/src/React/Blog%20Project/React%20Blog.md/result.png)
