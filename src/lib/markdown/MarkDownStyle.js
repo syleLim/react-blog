@@ -11,10 +11,11 @@ const inlineCodeBlock = (props) => {
 const codeBlock = (props) => {
 	return (
 		<pre style={{
-					background		: "#5f5f5f",
-					borderRadius	: 10,
+					background		: "#101010",
+					color			: "white",
 					padding			: 10,
 					margin			: 10,
+					overflowX		: "auto"
 				}}>
 			{props.value}
 		</pre>
@@ -29,6 +30,17 @@ const previewInlineCodeBlock = (props) => {
 			{props.value}
 		</span>
 	)
+}
+
+const imgBlock = (props) => {
+	console.log(props)
+	return (
+		<img style={{
+			width	: "100%",
+			height	: "auto",
+		}}
+		src={props.src}/>
+	);
 }
 
 const previewCodeBlock = (props) => {
@@ -61,4 +73,4 @@ const previewHeader = (props) => {
 	)
 }
 
-export { inlineCodeBlock, codeBlock, previewCodeBlock, previewInlineCodeBlock, previewHeader};
+export { inlineCodeBlock, codeBlock, imgBlock, previewCodeBlock, previewInlineCodeBlock, previewHeader};

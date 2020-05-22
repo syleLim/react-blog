@@ -7,6 +7,7 @@ import { Footer, Header } from "../"
 
 class AppComponent extends React.Component {
     render () {
+        
         return (
             <div>
                 <Header />

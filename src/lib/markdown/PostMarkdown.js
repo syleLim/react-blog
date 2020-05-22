@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import ReactMarkDown from "react-markdown"
-import { inlineCodeBlock, codeBlock } from "./MarkDownStyle"
+import { inlineCodeBlock, codeBlock, imgBlock } from "./MarkDownStyle"
 
 const PostMarkDown = ({content}) => {
 	return (
@@ -10,7 +10,8 @@ const PostMarkDown = ({content}) => {
 					escapeHtml={false}
 					renderers={{ 
 								code		: codeBlock,
-								inlineCode	: inlineCodeBlock
+								inlineCode	: inlineCodeBlock,
+								image		: imgBlock
 							}}/>
 	)
 }

@@ -9,14 +9,14 @@ import { PostStyle,
 			PostContent,
 			PostAuthor,
 			Line }		from "../../styles"
-import { PostMarkDown }	from "../../lib"
+import { Md, PostMarkDown }	from "../../lib"
 
 
 const PostCompoenet = ({info, content}) => {
 	const { title, author, date } = info.toJS();
 	return (
 		<PostStyle>
-			<PostTitle>{title}</PostTitle>
+			<PostTitle>{title.slice(0, -3)}</PostTitle>
 			<PostAuthor>{author}</PostAuthor>
 			<PostDate>{date}</PostDate>
 			<PostContent>

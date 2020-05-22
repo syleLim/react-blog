@@ -4,7 +4,7 @@
 	"blogTitle"			: "seolim`s blog",
 	"blogDescription"	: "doing anything",
 	"lastPosts"			: [
-
+		["React", "Blog Project", "React Blog.md"]
 	],
 	"POSTS"				: [
 		{
