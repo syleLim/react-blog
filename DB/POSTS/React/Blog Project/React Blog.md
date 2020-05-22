@@ -51,7 +51,7 @@
       ├── package.json
       └── webpack.config.js
   ``` 
----
+<br><br>
 - ### Module 설치
      - [**npm 이란?**](https://uploadLater)
      
@@ -63,8 +63,23 @@
   //babel 관련 모듈
   npm install --save-dev @babel/core babel-loader @babel/preset-react @babel/preset-env
   ```
----
+<br><br>
 - ### 최초 기본 파일 생성
+    #### 기본 디렉토리
+    ```=
+    react-blog
+        ├── node_modules
+        ├── src
+        |   ├── index.html
+        |   ├── index.js
+        |   └── component
+        |       └── App.js
+        ├── .babelrc
+        ├── .gitignore
+        ├── package.json
+        └── webpack.config.js
+    ``` 
+    
     #### Webpack.config.js [**(webpack 이란?)**]()
 
     ```javascript=
@@ -117,7 +132,7 @@
         <title>My React App</title>
     </head>
     <body>
-        <div id="app"></div>				
+        <div id="root"></div>				
     </body>
     </html>
     ```
@@ -128,10 +143,9 @@
     import ReactDOM from 'react-dom';
     import App from './component/App' //최초의 component 파일 경로
 
-    ReactDOM.render(<App/>, document.getElementById('app'))
+    ReactDOM.render(<App/>, document.getElementById('root'))
     ```
----
-
+<br><br>
 - ### 최초 component 생성
     #### component/App.js
     ```javascript=
@@ -149,9 +163,9 @@
 
     export default App
     ```
----
+<br><br>
 - #### build 명령어 설정
-    - package.json의 스크립트를 아래와 같이 수정 [(Why?)]()
+package.json의 스크립트를 아래와 같이 수정 [(Why?)]()
   #### package.json
   ```json=
   ...
@@ -161,7 +175,7 @@
   },
   ...
   ```
----
+<br><br>
  - #### 실행
      ```=
      npm start
