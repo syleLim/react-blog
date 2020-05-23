@@ -5,7 +5,8 @@
 	"blogDescription"	: "doing anything",
 	"lastPosts"			: [
 		["React", "Blog Project", "React Blog.md"],
-		["React", "Blog Project", "Redux Router.md"]
+		["React", "Blog Project", "Redux Router.md"],
+		["React", "Acknownledge", "WebPack.md"]
 	],
 	"POSTS"				: [
 		{
@@ -25,7 +26,14 @@
 				{
 					"categoryName"	: "Acknownledge",
 					"posts"			: [
-						
+						{
+							"groupName"		: "React",
+							"categoryName"	: "Acknownledge",
+							"title" 		: "WebPack.md",
+							"author"		: "seolim",
+							"date"			: "2020-05-22",
+							"preview"		: "What is Webpack"
+						}		
 					]
 				},
 				{

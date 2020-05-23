@@ -23,10 +23,10 @@
 
 ## Start Project
  - ### Project Directory 구성하기 
-    - **src** : 모든 페이지 구성 소스가 담긴 디렉토리
-    - **DB** : 블로그 정보와 post가 담긴 디렉토리
-    - **etc** : react 정보 파일들
-    - [**정보 파일들**]()
+   - **src** : 모든 페이지 구성 소스가 담긴 디렉토리
+   - **DB** : 블로그 정보와 post가 담긴 디렉토리
+   - **etc** : react 정보 파일들
+   - [**정보 파일들**](/post/React/Acknownledge/WebPack.md)
     <p></p>
     
     

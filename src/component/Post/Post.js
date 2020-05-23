@@ -11,7 +11,6 @@ import { PostStyle,
 			Line }		from "../../styles"
 import { Md, PostMarkDown }	from "../../lib"
 
-
 const PostCompoenet = ({info, content}) => {
 	const { title, author, date } = info.toJS();
 	return (
