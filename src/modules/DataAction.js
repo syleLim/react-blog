@@ -4,7 +4,7 @@ import axios 							from "axios"
 import { pender }						from "redux-pender"
 
 const getDataAPI = () => {
-	return axios.get("http://localhost:3001/api")
+	return axios.get("/DB/information.json")
 }
 
 const GET_DATA = "GET_DATA"

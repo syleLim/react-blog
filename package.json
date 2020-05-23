@@ -4,12 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start" : "npm-run-all --parallel start:**",
-    "start:client": "webpack-dev-server --mode development --open --hot",
-    "start:server": "node ./server/server.js",
-    "build" : "npm-run-all --parallel build:**",
-    "build:client": "webpack --mode production",
-    "build:server": "node ./server/server.js"
+    "start": "webpack-dev-server --mode development --open --hot",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",

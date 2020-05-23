@@ -33,6 +33,14 @@
 							"author"		: "seolim",
 							"date"			: "2020-05-22",
 							"preview"		: "What is Webpack"
+						},
+						{
+							"groupName"		: "React",
+							"categoryName"	: "Acknownledge",
+							"title" 		: "babel.md",
+							"author"		: "seolim",
+							"date"			: "2020-05-23",
+							"preview"		: "What is babel"
 						}		
 					]
 				},
