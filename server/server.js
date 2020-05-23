@@ -11,6 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use("/api", (req, res) => res.json(json));
 
-app.listen(port, () => {
-	console.log("server start");
+const server = app.listen(port, () => {
+	console.log("server : ", server.address().address);
+	console.log("port : ", server.address().port)
 })
